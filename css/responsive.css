@@ -1,3 +1,17 @@
+:root {
+  /*  change here  */
+  --inspiration-color: #008ed4;
+  --slightly-black-color: #575757;
+  --primary-color: #ed6436;
+  --slight-primary-color: rgba(237, 100, 54, .5);
+  --white-color: #fff;
+  --very-slight-white-color: #efefef;
+  --black-color: #000;
+  --dark-white-color: #d8d8d8;
+  --danger-color: #ff0b28;
+  --site-padding: 7.8vw;
+}
+
 @media only screen and (max-width: 1130px) {
   .happy__title {
     font-size: 5rem;
