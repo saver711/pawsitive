@@ -225,23 +225,25 @@ window.onload = function () {
   });
 
   //start form authentication
-
+  let checkValid = false;
   document.logInForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    let checkValid = formValidation(
+     formValidation(
       document.logInForm.loginEmail,
       document.logInForm.loginPassword
     );
-    checkValid ?? document.logInForm.submit();
+    if(checkValid) document.logInForm.submit();
+    // checkValid ?? document.logInForm.submit(); // not supported in old browsers
   });
 
   document.signUpForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    let checkValid = formValidation(
+    formValidation(
       document.signUpForm.signEmail,
       document.signUpForm.signPassword
     );
-    checkValid ?? document.signUpForm.submit();
+    if(checkValid) document.signUpForm.submit();
+    // checkValid ?? document.signUpForm.submit(); // not supported in old browsers
   });
   function formValidation(theFormEmail, theFormPassword) {
     let uemail = theFormEmail,
@@ -265,6 +267,7 @@ window.onload = function () {
     if (uemail.value.match(mailformat)) {
       uemail.nextElementSibling.style.display = "none";
       return true;
+      
     } else {
       uemail.nextElementSibling.style.display = "block";
       uemail.focus();
@@ -282,6 +285,7 @@ window.onload = function () {
       return false;
     } else {
       passid.nextElementSibling.style.display = "none";
+      checkValid = true;
       return true;
     }
   }
