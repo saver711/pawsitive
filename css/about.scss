@@ -1,17 +1,229 @@
 :root {
-    /*  change here  */
-    --inspiration-color: #008ed4;
-    --slightly-black-color: #575757;
-    --primary-color: #ed6436;
-    --slight-primary-color: rgba(237, 100, 54, .5);
-    --white-color: #fff;
-    --very-slight-white-color: #efefef;
-    --black-color: #000;
-    --dark-white-color: #d8d8d8;
-    --danger-color: #ff0b28;
-    --site-padding: 7.8vw;
+  /*  change here  */
+  --inspiration-color: #008ed4;
+  --slightly-black-color: #575757;
+  --primary-color: #ed6436;
+  --slight-primary-color: rgba(237, 100, 54, 0.5);
+  --white-color: #fff;
+  --very-slight-white-color: #efefef;
+  --black-color: #000;
+  --dark-white-color: #d8d8d8;
+  --danger-color: #ff0b28;
+  --site-padding: 7.8vw;
+}
+
+/* start  view*/
+.viewAbout {
+  position: relative;
+  min-height: 106vh;
+  padding-bottom: 30vh;
+  background-image: url(../assets/images/background_01.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+
+  &__text {
+    padding-top: 17rem;
+    
+    color: var(--white-color);
   }
 
-/* start  */
+  
 
-/* end  */
+  &__p{
+      font-size: 1.7rem;
+      margin: 2rem 0;
+      max-width: 60rem;
+  }
+
+  .mainBtn{
+      font-size: 1.4rem;
+      text-transform: uppercase;
+  }
+
+  .showNav{
+    .nav {
+        &__item {
+            color: var(--slightly-black-color);
+        }
+      }
+
+        .nav__logo {
+          img {
+            display: none;
+          }
+          display: inline-block;
+    
+          width: 130px;
+          height: 60px;
+          background-image: url(../assets/images/logo-green.webp);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+  }
+}
+
+/* end  view*/
+
+/* start invest */
+.invest{
+    .box{
+        column-gap: 3rem;
+    }
+    &__left{
+        p{
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: var(--slightly-black-color);
+
+            &:first-of-type{
+                margin-top: 2rem;
+            }
+
+            &:not(:last-of-type){
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__cart{
+        border: 1.2px solid var(--very-slight-white-color);
+        padding: 1.8rem;
+        border-radius: 10px;
+        transition: background-color .2s ease;
+
+        &:not(:last-of-type){
+            margin-bottom: 2rem;
+        }
+        &:first-child{
+            margin-top: 14rem;
+        }
+
+        &--left{
+
+            h2{
+                display: inline-block;
+            }
+        }
+
+        &.active{
+            background-color: var(--very-slight-white-color);
+
+            h2{
+                color: var(--primary-color);
+            }
+
+            .invest__clickable{
+
+        
+            & + p{
+                transition: max-height .8s ease;
+                max-height: 900px;
+            }
+            }
+        }
+    }
+
+    &__cart--leftIcon, &__cart--rightIcon{
+        font-size: 1.5rem;
+        width: 4rem;
+        height: 4rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        
+    }
+
+    &__cart--leftIcon{
+        background-color: lightgreen;
+        margin-right: 1rem;
+    }
+
+    &__cart--rightIcon{
+        border: 1.3px solid var(--slightly-black-color);
+    }
+
+    &__clickable{
+        cursor: pointer;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & + p{
+        padding-left: 5.3rem;
+        font-size: 1.5rem;
+        max-height: 0;
+        position: relative;
+        top: 1rem;
+        overflow: hidden;
+        transition: max-height .1s ease;
+
+    }
+    }
+}
+/* end invest */
+
+/* start responsive */
+@media only screen and (min-width: 681px) {
+  /* start nav */
+  .nav {
+    &__item {
+      color: var(--white-color);
+    }
+
+    &__nested {
+      &--item {
+        color: var(--slightly-black-color);
+      }
+    }
+  }
+
+  .alternateNav {
+    i {
+      color: var(--white-color);
+    }
+  }
+
+  /* end nav */
+
+  
+}
+
+@media only screen and (max-width: 680.99px) {
+  /* start nav */
+  .mainNav {
+    .nav__logo {
+      img {
+        display: none;
+      }
+      display: inline-block;
+
+      width: 85px;
+      height: 40px;
+      background-image: url(../assets/images/logo-green.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .alternateNav {
+    i {
+      color: var(--white-color);
+    }
+  }
+
+  /* end nav */
+
+  /* start invest */
+  .invest__cart:first-child{
+    margin-top: 0;
+}
+/* end invest */
+}
+
+//
+//
+/* end responsive */

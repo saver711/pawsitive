@@ -478,64 +478,6 @@
 }
 
 /* end check */
-/* start footer */
-.footer {
-  margin-top: 9rem;
-}
-.footer .box {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 5rem;
-}
-.footer__list {
-  display: flex;
-  margin-top: 3rem;
-}
-.footer__item {
-  color: var(--white-color);
-  font-size: 2rem;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-}
-.footer__item:not(:last-of-type) {
-  margin-right: 2rem;
-}
-.footer__div {
-  display: flex;
-  flex-direction: column;
-}
-.footer__title {
-  text-transform: capitalize;
-  color: var(--primary-color);
-  font-size: 2.6rem;
-  margin-bottom: 1.3rem;
-}
-.footer__link {
-  font-size: 1.3em;
-  display: flex;
-  align-items: center;
-  transition: color 0.2s ease;
-}
-.footer__link:hover {
-  color: var(--slight-primary-color);
-}
-.footer__link i {
-  margin-right: 0.8rem;
-  color: var(--primary-color);
-}
-.footer__link:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.footer__contact {
-  text-transform: uppercase;
-}
-
-/* end footer */
 /* start inspiration */
 .inspiration {
   position: fixed;
@@ -671,4 +613,65 @@
   fill: var(--inspiration-color);
 }
 
-/* end inspiration svg styling *//*# sourceMappingURL=home.css.map */
+/* end inspiration svg styling */
+/* start responsive */
+@media only screen and (max-width: 1130px) {
+  .happy__title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .happy__title {
+    font-size: 5rem;
+  }
+  .happy__title span {
+    display: inline-block;
+  }
+
+  .happy .box__left--60,
+.happy .box__right--40 {
+    grid-column: 1/13;
+  }
+
+  .happy__right {
+    padding-left: var(--site-padding);
+  }
+
+  .prices .box {
+    gap: 2rem;
+  }
+
+  .price_card.special {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 910px) {
+  /* cards section */
+  .cards .box {
+    gap: 3rem;
+    grid-template-rows: -webkit-max-content;
+    grid-template-rows: max-content;
+  }
+}
+@media only screen and (max-width: 680.99px) {
+  /* start services1 */
+  .service__inner a {
+    bottom: 0;
+  }
+
+  /* end services1 */
+  /* start ex section */
+  .ex .box__left--40,
+.ex .box__right--60 {
+    grid-column: 1/13;
+  }
+  .ex .view__left {
+    padding-right: var(--site-padding) !important;
+  }
+  .ex .view__right {
+    padding-left: var(--site-padding) !important;
+  }
+
+  /* end ex section */
+}
+/* end responsive *//*# sourceMappingURL=home.css.map */
