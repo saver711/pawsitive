@@ -403,7 +403,7 @@ window.onload = function () {
         this.wheelStart = e.deltaY;
         this.handleGesture();
         this.wheelStart = 0;
-      });
+      }, {passive: true});
     }
 
     // end mousewheel
@@ -460,7 +460,7 @@ window.onload = function () {
       this.container.addEventListener("touchstart", (e) => {
         clearInterval(this.sliderAutoplay);
         this.touchstartX = e.changedTouches[0].screenX;
-      });
+      }, {passive: true});
       //drag start
       this.container.addEventListener("mousedown", (e) => {
         clearInterval(this.sliderAutoplay);
@@ -471,7 +471,7 @@ window.onload = function () {
         this.sliderAutoplay = setInterval(this.nextSlide, 2000);
         this.touchendX = e.changedTouches[0].screenX;
         this.handleGesture();
-      });
+      }, {passive: true});
       //drag end
       this.container.addEventListener("mouseup", (e) => {
         this.dragEnd = e.clientX;
