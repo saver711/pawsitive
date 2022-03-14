@@ -192,16 +192,19 @@ window.onload = function () {
   // click on login btn
   const nav__log = document.querySelector(".nav__log"),
     nav__formContainer = document.querySelector(".nav__form-container");
-  nav__log.addEventListener("click", () => {
-    if (!nav__formContainer.classList.contains("open"))
-      nav__log.classList.add("clicked");
-    setTimeout(() => {
-      nav__formContainer.classList.add("open");
-    }, 220);
-
-    const loginEmail = document.getElementById("loginEmail");
-    loginEmail.focus();
-  });
+  if(nav__log){ // because it might be hidden
+    // i can do like >> nav__log?.addEventLis.... //but it is not supported in old browsers so i made it with if()
+    nav__log.addEventListener("click", () => { 
+      if (!nav__formContainer.classList.contains("open"))
+        nav__log.classList.add("clicked");
+      setTimeout(() => {
+        nav__formContainer.classList.add("open");
+      }, 220);
+  
+      const loginEmail = document.getElementById("loginEmail");
+      loginEmail.focus();
+    });
+  }
 
   // form__showPassword
   const form__showPasswordInputs = document.querySelectorAll(
@@ -563,7 +566,8 @@ window.onload = function () {
       return;
     else nav__formContainer.classList.remove("open");
     setTimeout(() => {
-      nav__log.classList.remove("clicked");
+      if(nav__log) nav__log.classList.remove("clicked");
+      
     }, 400);
 
     //end nav__form
