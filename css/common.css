@@ -1,0 +1,498 @@
+/* start general css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;800&family=Sansita+Swashed:wght@300;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body.stop-scrolling {
+  height: 100vh;
+  padding-right: 17px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  padding: 3px 5px;
+  outline: none;
+}
+input:active {
+  outline: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  overflow: hidden;
+}
+
+.paddB-35 {
+  padding-bottom: 3.5rem;
+}
+
+.paddTB-35 {
+  padding: 3.5rem 0;
+}
+
+/* end general css */
+/*start project related general css code*/
+.transitionDelay_150 {
+  transition-delay: 150ms !important;
+}
+
+.transitionDelay_300 {
+  transition-delay: 300ms !important;
+}
+
+.translateOnScroll {
+  transition: transform 0.6s ease-in-out;
+}
+
+.siteHeading {
+  font-size: 7rem;
+  font-weight: bold;
+  margin-top: 12rem;
+  line-height: 1.2;
+}
+.siteHeading span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.sectionTitle {
+  font-size: 6rem;
+}
+
+.sectionText {
+  font-size: 1.7rem;
+  margin: 2.2rem 0 4rem;
+}
+
+.main-container {
+  max-width: 1200px;
+  width: 85vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mainBtn {
+  box-shadow: 0 0 0 4em var(--primary-color) inset;
+  color: var(--white-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  transition: all 0.3s ease;
+  padding: 5px 15px;
+  border: 2px solid var(--primary-color);
+}
+.mainBtn:hover {
+  box-shadow: 0 0 0 0 var(--primary-color) inset;
+  color: var(--primary-color);
+}
+
+.mainBtn2 {
+  transform-origin: center center;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.57, 0.33, 1.56);
+}
+.mainBtn2:hover {
+  transform: rotate(10deg);
+}
+
+.form__content {
+  padding: 10px;
+}
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.33rem;
+}
+.form label:not(:first-of-type) {
+  margin-top: 10px;
+}
+.form input:not([type=submit]) {
+  border: 1px solid var(--dark-white-color);
+}
+.form input[type=submit] {
+  width: 100%;
+}
+.form__error {
+  color: var(--danger-color);
+  font-size: 1.2rem;
+  display: none;
+}
+
+/*end project related general css code*/
+/* start nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+.nav__close {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  transition: padding 0.6s ease-in-out;
+}
+.nav-container.showNav {
+  padding: 1rem 0;
+  position: fixed;
+  background-color: var(--white-color);
+}
+
+.alternateNav {
+  display: none;
+}
+
+.nav__logo {
+  width: 13rem;
+}
+
+.nav__list {
+  display: flex;
+  position: relative;
+}
+
+.nav__item {
+  text-transform: capitalize;
+  color: var(--slightly-black-color);
+  font-weight: bold;
+  font-size: 1.7rem;
+  position: relative;
+}
+.nav__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.nav__icon {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 2px 3px;
+  border-radius: 1.2px;
+}
+.nav__icon::before {
+  position: relative;
+}
+.nav__icon:hover::before {
+  top: 0.6px;
+}
+
+.nav__nested {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  z-index: 1;
+  background-color: var(--white-color);
+  min-width: 20rem;
+  max-width: 190px;
+  max-height: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-out, max-height 0.4s ease;
+}
+
+.nav__nested.open {
+  box-shadow: 0 5px 10px 2px var(--slightly-black-color);
+  max-height: 500px;
+}
+
+.nav__nested--items-box {
+  padding: 1rem 2.3rem;
+}
+
+.nav__nested--item {
+  border-bottom: 1px solid var(--very-slight-white-color);
+  padding: 0.7rem 0 2px;
+}
+.nav__nested--item:not(:first-of-type) {
+  padding-top: 1.7rem;
+}
+.nav__nested--item a {
+  display: block;
+  transition: color 0.1s ease;
+}
+.nav__nested--item a:hover {
+  color: var(--primary-color);
+}
+
+.nav__under {
+  width: 5.2rem;
+  position: absolute;
+  display: inline-block;
+  bottom: -1.5rem;
+  left: -0.2rem;
+  background-color: var(--primary-color);
+  height: 5px;
+  transition: all 0.1s ease;
+}
+.nav__under span {
+  position: absolute;
+  display: inline-block;
+  background-color: var(--primary-color);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.nav__under--1 {
+  top: -4px;
+  left: -4px;
+}
+.nav__under--2 {
+  bottom: -4px;
+  left: -4px;
+}
+.nav__under--3 {
+  bottom: -4px;
+  right: -4px;
+}
+.nav__under--4 {
+  top: -4px;
+  right: -4px;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+}
+
+.nav__user {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav__person {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+
+.nav__log {
+  background-color: var(--slight-primary-color);
+  position: relative;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.nav__log p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white-color);
+  text-transform: capitalize;
+}
+.nav__log.clicked .custom-shape-divider-bottom-1646521459 {
+  height: 0%;
+}
+
+.nav__form-container {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  overflow: hidden;
+  background-color: var(--white-color);
+  border-radius: 6px;
+  max-height: 0;
+  transition: box-shadow 0.3s ease-out, max-height 0.4s ease;
+}
+.nav__form-container.open {
+  max-height: 900px;
+  box-shadow: 0 5px 10px 2px var(--slightly-black-color);
+}
+
+.nav__form[name=signUpForm] {
+  display: none;
+}
+
+.form__showPassword {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 15px;
+}
+.form__showPassword input {
+  margin-bottom: 0;
+  margin: 0 5px 0 0;
+}
+.form__showPassword label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.formSplit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formSplit__item {
+  text-align: center;
+  flex-basis: 50%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  padding: 5px 0;
+}
+.formSplit__item.active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+.formSplit__item:not(.active) {
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.formSplit__item:not(.active):hover {
+  border-color: rgba(237, 100, 54, 0.4);
+  color: rgba(237, 100, 54, 0.8);
+}
+
+.form__splitter {
+  position: relative;
+  width: 100%;
+  border-top: 1.7px solid var(--dark-white-color);
+  margin: 20px 0;
+}
+
+.form__splitter--circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-color);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.7px solid var(--dark-white-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form__social {
+  display: block;
+  padding: 4px 6px;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form__social:first-of-type {
+  margin-top: 25px;
+}
+.form__social.fb {
+  background-color: #0054f7;
+}
+.form__social.twitter {
+  background-color: #00acee;
+}
+.form__social:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+/* login shape */
+.custom-shape-divider-bottom-1646521459 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+  height: 100%;
+  transition: height 0.2s ease;
+}
+
+.custom-shape-divider-bottom-1646521459 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+}
+
+.custom-shape-divider-bottom-1646521459 .shape-fill {
+  fill: #ed6436;
+}
+
+/* end nav */
+/* start grid */
+.box {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.box__left--40 {
+  grid-column: 1/6;
+}
+.box__right--60 {
+  grid-column: 6/13;
+}
+.box__right--40 {
+  grid-column: 8/13;
+}
+.box__left--60 {
+  grid-column: 1/8;
+}
+.box__left--33 {
+  grid-column: 1/5;
+}
+.box__middle--33 {
+  grid-column: 5/9;
+}
+.box__right--33 {
+  grid-column: 9/13;
+}
+.box__left--25 {
+  grid-column: 1/4;
+}
+.box__middle1--25 {
+  grid-column: 4/7;
+}
+.box__middle2--25 {
+  grid-column: 7/10;
+}
+.box__right--25 {
+  grid-column: 10/13;
+}
+
+.boxOf2 > div:first-of-type {
+  padding-right: 10px;
+}
+.boxOf2 > div:last-of-type {
+  padding-left: 10px;
+}
+
+/* end grid *//*# sourceMappingURL=common.css.map */
