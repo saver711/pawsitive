@@ -615,22 +615,17 @@
 
 /* end inspiration svg styling */
 /* start responsive */
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1170.99px) {
   .happy__title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 980.99px) {
   .happy__title {
     font-size: 5rem;
   }
   .happy__title span {
     display: inline-block;
-  }
-
-  .happy .box__left--60,
-.happy .box__right--40 {
-    grid-column: 1/13;
   }
 
   .happy__right {
@@ -645,7 +640,7 @@
     transform: scale(1);
   }
 }
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 950.99px) {
   /* cards section */
   .cards .box {
     gap: 3rem;
@@ -653,7 +648,7 @@
     grid-template-rows: max-content;
   }
 }
-@media only screen and (max-width: 680.99px) {
+@media only screen and (max-width: 720.99px) {
   /* start services1 */
   .service__inner a {
     bottom: 0;

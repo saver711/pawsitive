@@ -72,6 +72,14 @@ section{
 .paddTB-35{
   padding: 3.5rem 0;
 }
+
+
+/* 
+also recommended to do the following:
+1- divide the site into styling similar components
+2- set general font size to the p, all h elements p{font-size: 'value'rem}
+3- set general line-height for p element (1.56 for example)
+*/
 /* end general css */
 
 /*start project related general css code*/
@@ -99,7 +107,7 @@ section{
 }
 
 .sectionTitle{
-  font-size: 6rem;
+  font-size: 5.2rem;
 }
 .sectionText{
   font-size: 1.7rem;
@@ -123,6 +131,7 @@ section{
   border-top-left-radius: 0;
   transition: all .3s ease;
   padding: 5px 15px;
+  text-align: center;
   border: 2px solid var(--primary-color);
 
   &:hover{
@@ -228,7 +237,6 @@ section{
   z-index: 11;
   transition: padding .6s ease-in-out;
   &.showNav{
-    padding: 1rem var(--site-padding);
     left: 50%;
     max-width: 2000px;
     transform: translateX(-50%);
@@ -558,7 +566,7 @@ padding: 1rem 2.3rem;
 
 /* start footer */
 .footer{
-  margin-top: 9rem;
+  margin-top: 3rem;
 
   .box{
     column-gap:2rem;
@@ -628,6 +636,14 @@ padding: 1rem 2.3rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
+  &__left--70{
+    grid-column: 1 / 9;
+  }
+  &__right--30{
+    grid-column: 9 / 13;
+  }
+
+
   &__left--50{
     grid-column: 1 / 7;
   }
@@ -689,7 +705,26 @@ padding: 1rem 2.3rem;
 
 
 /* start responsive */
-@media only screen and (max-width: 910px) {
+
+@media only screen and (max-width: 1170.99px) {
+  /* general */
+  .sectionTitle{
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width:980.99px) {
+  .sectionTitle{
+    margin-top: 3rem;
+  }
+  .box__left--60, .box__right--40 {
+    grid-column: 1/13;
+  }
+}
+
+
+
+@media only screen and (max-width: 950.99px) {
   /* general */
 
   html {
@@ -697,30 +732,28 @@ padding: 1rem 2.3rem;
   }
 
   /* responsive */
-  .box {
-    &__left--25,
-    &__middle2--25 {
-      grid-column: 1 / 7;
-    }
-    &__middle1--25,
-    &__right--25 {
-      grid-column: 7 / 13;
-    }
-  }
+  // .box {
+  //   &__left--25,
+  //   &__middle2--25 {
+  //     grid-column: 1 / 7;
+  //   }
+  //   &__middle1--25,
+  //   &__right--25 {
+  //     grid-column: 7 / 13;
+  //   }
+  // }
 }
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 830.99px) {
   /* general */
   html {
     font-size: 6.5px;
   }
 }
 
-@media only screen and (max-width: 680.99px) {
+@media only screen and (max-width: 720.99px) {
   /* responsive */
-  .services1,
-  .cards, .prices, .footer {
-    .box {
+    .responseBox {
       grid-template-columns: 1fr;
 
       & > div {
@@ -729,7 +762,7 @@ padding: 1rem 2.3rem;
         margin: 0 auto;
       }
     }
-  }
+
 
   /* responsive */
   .box {
@@ -845,6 +878,23 @@ padding: 1rem 2.3rem;
     display: none;
   }
   /* end navs */
+
+  /* start footer */
+  .footer__div{
+    align-items: center;
+  }
+  /* end footer */
+
+}
+
+@media only screen and (max-width: 450.99px) {
+  /* responsive */
+    .responseBox {
+      & > div {
+        width: 86%;
+      }
+    }
+
 
 }
 /* end responsive */

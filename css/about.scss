@@ -55,8 +55,8 @@
           }
           display: inline-block;
     
-          width: 130px;
-          height: 60px;
+          width: 106px;
+        height: 50px;
           background-image: url(../assets/images/logo-green.webp);
           background-size: contain;
           background-repeat: no-repeat;
@@ -166,8 +166,137 @@
 }
 /* end invest */
 
+/* start achieve */
+.achieve{
+  .box{
+    column-gap: 2rem;
+    row-gap: 7rem;
+  }
+  svg{
+    width: 7rem;
+    height: 7rem;
+  }
+
+  &__title{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 1.8rem 0;
+
+  }
+
+  &__text{
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+/* start achieve */
+
+/* start meet */
+.meet{
+  .mainBtn{
+    text-transform: uppercase;
+  }
+}
+/* start meet */
+
+/* start team */
+.team{
+  background-image: url(../assets/images/background_02.webp);
+  background-position: center;
+  .box{
+    row-gap: 5rem;
+  }
+  
+  &__person{
+    text-align: center;
+  }
+  &__name{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    margin: 1.5rem 0 .8rem;
+  }
+  &__job{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+}
+
+/* ////////////// start welcome */
+.welcome{
+  margin-top: 5rem;
+  .sectionTitle{
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__right{
+    color: var(--white-color);
+    padding: 5rem 4rem;
+    background-color: #7ac043;
+    border-radius: 5rem;
+    
+    svg{
+      width: 4.7rem;
+      height: 4.7rem;
+      margin-bottom: 4.5rem;
+  
+      circle{
+        fill: #fff;
+      }
+    }
+  }
+
+  &__label{
+    margin-bottom: .3rem;
+    font-size: 1.8rem;
+  }
+
+  &__semiLabel{
+    margin-bottom: 1.8rem;
+    font-size: 1.3rem;
+  }
+
+}
+
+.welcome__piece{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  svg{
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1.2rem;
+  }
+
+  &--title{
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+  }
+
+  &--p{
+    font-size: 1.4rem;
+    max-width: 44rem;
+    line-height: 1.5;
+  }
+}
+/* ////////////// end welcome */
+/* end team */
+
+/* start footer */
+// .footer{
+//   margin-top: 5rem;
+// }
+/* end footer */
+
+
+
 /* start responsive */
-@media only screen and (min-width: 681px) {
+@media only screen and (min-width: 721px) {
   /* start nav */
   .nav {
     &__item {
@@ -181,6 +310,14 @@
     }
   }
 
+
+    .showNav{
+      padding: 2rem var(--site-padding);
+      
+    }
+  
+
+
   .alternateNav {
     i {
       color: var(--white-color);
@@ -192,9 +329,9 @@
   
 }
 
-@media only screen and (max-width: 680.99px) {
+@media only screen and (max-width: 720.99px) {
   /* start nav */
-  .mainNav {
+  .nav-container {
     .nav__logo {
       img {
         display: none;
@@ -213,7 +350,31 @@
     i {
       color: var(--white-color);
     }
+
+    .nav__logo {
+      background-image: url(../assets/images/logo-white.webp);
+
+    }
   }
+
+ .viewAbout{
+  .showNav{
+    .alternateNav {
+      i {
+        color: var(--slightly-black-color);
+      }
+    }
+
+
+          .nav__logo {
+            width: 85px;
+        height: 40px;
+
+          }
+  
+    
+  }
+ }
 
   /* end nav */
 

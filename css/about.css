@@ -39,8 +39,8 @@
 }
 .viewAbout .showNav .nav__logo {
   display: inline-block;
-  width: 130px;
-  height: 60px;
+  width: 106px;
+  height: 50px;
   background-image: url(../assets/images/logo-green.webp);
   background-size: contain;
   background-repeat: no-repeat;
@@ -124,8 +124,115 @@
 }
 
 /* end invest */
+/* start achieve */
+.achieve .box {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 7rem;
+}
+.achieve svg {
+  width: 7rem;
+  height: 7rem;
+}
+.achieve__title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 1.8rem 0;
+}
+.achieve__text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* start achieve */
+/* start meet */
+.meet .mainBtn {
+  text-transform: uppercase;
+}
+
+/* start meet */
+/* start team */
+.team {
+  background-image: url(../assets/images/background_02.webp);
+  background-position: center;
+}
+.team .box {
+  row-gap: 5rem;
+}
+.team__person {
+  text-align: center;
+}
+.team__name {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  margin: 1.5rem 0 0.8rem;
+}
+.team__job {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+/* ////////////// start welcome */
+.welcome {
+  margin-top: 5rem;
+}
+.welcome .sectionTitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.welcome__right {
+  color: var(--white-color);
+  padding: 5rem 4rem;
+  background-color: #7ac043;
+  border-radius: 5rem;
+}
+.welcome__right svg {
+  width: 4.7rem;
+  height: 4.7rem;
+  margin-bottom: 4.5rem;
+}
+.welcome__right svg circle {
+  fill: #fff;
+}
+.welcome__label {
+  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+}
+.welcome__semiLabel {
+  margin-bottom: 1.8rem;
+  font-size: 1.3rem;
+}
+
+.welcome__piece {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+.welcome__piece svg {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1.2rem;
+}
+.welcome__piece--title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.welcome__piece--p {
+  font-size: 1.4rem;
+  max-width: 44rem;
+  line-height: 1.5;
+}
+
+/* ////////////// end welcome */
+/* end team */
+/* start footer */
+/* end footer */
 /* start responsive */
-@media only screen and (min-width: 681px) {
+@media only screen and (min-width: 721px) {
   /* start nav */
   .nav__item {
     color: var(--white-color);
@@ -134,15 +241,19 @@
     color: var(--slightly-black-color);
   }
 
+  .showNav {
+    padding: 2rem var(--site-padding);
+  }
+
   .alternateNav i {
     color: var(--white-color);
   }
 
   /* end nav */
 }
-@media only screen and (max-width: 680.99px) {
+@media only screen and (max-width: 720.99px) {
   /* start nav */
-  .mainNav .nav__logo {
+  .nav-container .nav__logo {
     display: inline-block;
     width: 85px;
     height: 40px;
@@ -150,12 +261,23 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .mainNav .nav__logo img {
+  .nav-container .nav__logo img {
     display: none;
   }
 
   .alternateNav i {
     color: var(--white-color);
+  }
+  .alternateNav .nav__logo {
+    background-image: url(../assets/images/logo-white.webp);
+  }
+
+  .viewAbout .showNav .alternateNav i {
+    color: var(--slightly-black-color);
+  }
+  .viewAbout .showNav .nav__logo {
+    width: 85px;
+    height: 40px;
   }
 
   /* end nav */

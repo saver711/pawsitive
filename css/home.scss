@@ -687,26 +687,19 @@ height: 100%;
 
 
 /* start responsive */
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1170.99px) {
   // happy section
   .happy__title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 980.99px) {
   // happy section
   .happy__title {
     font-size: 5rem;
     span {
       display: inline-block;
-    }
-  }
-
-  .happy {
-    .box__left--60,
-    .box__right--40 {
-      grid-column: 1 / 13;
     }
   }
 
@@ -723,7 +716,7 @@ height: 100%;
   }
 }
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 950.99px) {
 
   /* cards section */
   .cards {
@@ -735,7 +728,7 @@ height: 100%;
 }
 
 
-@media only screen and (max-width: 680.99px) {
+@media only screen and (max-width: 720.99px) {
   /* start services1 */
   
 
