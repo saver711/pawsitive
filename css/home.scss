@@ -165,113 +165,44 @@
 /* end view */
 
 /* start happy section */
-.happy__left{
-  position: relative;
+
+.happy{
+  &__left{
+    position: relative;
+  }
+  
+  &__right{
+    padding-right:var(--site-padding);
+  }
+  
+  
+  &__ball{
+    top: 10vw;
+    left: 30%;
+  }
+  
+  &__food{
+    top: 8vw;
+    right: 2rem;
+  }
+  
+  &__candy{
+    top: 22vw;
+    left: 37%;
+  }
+
+  // .translateOnScroll{
+  //   transform: translate(50%, -50%);
+  // }
 }
 
-.happy__right{
-  padding-right:var(--site-padding);
-}
-
-.happy__positioned{
-  position: absolute;
-}
-
-.happy__ball{
-  top: 10vw;
-  left: 30%;
-}
-
-.happy__food{
-  top: 8vw;
-  right: 2rem;
-}
-
-.happy__candy{
-  top: 22vw;
-  left: 37%;
-}
 
 
 
 /* end happy section */
 
 /* start services1 section */
-.services1{
-  .item__deco{
-    fill: var(--very-slight-white-color);
-  }
-}
 
-.service{
-  position: relative;
-}
-
-.services1__corner{
-  position: absolute;
-  width: 9rem;
-  height: 9rem;
-      right: 1.5rem;
-    top: -4.5rem;
-    border-radius: 50%;
-  background-color: var(--white-color);
-
-}
-
-.service__inner{
-    position: absolute;
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-
-    &:hover{
-      a{
-        bottom: 0;
-      }
-    }
-
-  h2{
-    font-size: 2.55rem;
-    color: var(--white-color);
-  }
-  a{
-    color: var(--white-color);
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition-duration: .8s;
-    bottom: -200px;
-
-    span{
-      text-decoration: underline;
-    }
-
-    i{
-      margin-left: 5px;
-      position: relative;
-      top: 2px;
-    }
-  }
-}
-
-// animating svgs
-.moving_svg{
-  overflow: hidden;
-  &, & *{
-    transition: all 1.6s cubic-bezier(.61,-0.25,.1,1.4);
-    transform-origin: 50% 50%;
-  }
-  
-  .alternate_path, .alternate_g, .alternate_image{
-    visibility: hidden;
-  }
-}
 /* end services1 section */
 
 /* start ex section */
@@ -728,35 +659,9 @@ height: 100%;
 }
 
 
-@media only screen and (max-width: 720.99px) {
-  /* start services1 */
+// @media only screen and (max-width: 720.99px) {
   
-
-  .service__inner {
-    a {
-      bottom: 0;
-    }
-  }
-
-  /* end services1 */
-
-  /* start ex section */
-  .ex {
-    .box__left--40,
-    .box__right--60 {
-      grid-column: 1 / 13;
-    }
-
-    .view__left {
-      padding-right: var(--site-padding) !important;
-    }
-
-    .view__right {
-      padding-left: var(--site-padding) !important;
-    }
-  }
-  /* end ex section */
-}
+// }
 
 
 /* end responsive */

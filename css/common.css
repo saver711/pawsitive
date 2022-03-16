@@ -92,6 +92,7 @@ also recommended to do the following:
 }
 
 .translateOnScroll {
+  position: absolute;
   transition: transform 0.6s ease-in-out;
 }
 
@@ -199,6 +200,131 @@ also recommended to do the following:
   row-gap: 2.5rem;
 }
 
+header .headingComponent {
+  padding-top: 17rem;
+  color: var(--white-color);
+}
+
+.plusCart {
+  border: 1.2px solid var(--very-slight-white-color);
+  padding: 1.8rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+.plusCart:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.plusCart:first-child {
+  margin-top: 14rem;
+}
+.plusCart__left h2 {
+  display: inline-block;
+}
+.plusCart.active {
+  background-color: var(--very-slight-white-color);
+}
+.plusCart.active h2 {
+  color: var(--primary-color);
+}
+.plusCart.active .plusCart__clickable + p {
+  transition: max-height 0.8s ease;
+  max-height: 900px;
+}
+.plusCart__leftIcon, .plusCart__rightIcon {
+  font-size: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.plusCart__leftIcon {
+  background-color: lightgreen;
+  margin-right: 1rem;
+}
+.plusCart__rightIcon {
+  border: 1.3px solid var(--slightly-black-color);
+}
+.plusCart__clickable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plusCart__clickable + p {
+  padding-left: 5.3rem;
+  font-size: 1.5rem;
+  max-height: 0;
+  position: relative;
+  top: 1rem;
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+}
+
+.polygon {
+  position: relative;
+}
+.polygon .item__deco {
+  fill: var(--very-slight-white-color);
+}
+
+.polygon__corner {
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  right: 1.5rem;
+  top: -4.5rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+
+.polygon__inner {
+  position: absolute;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.polygon__inner:hover a {
+  bottom: 0;
+}
+.polygon__inner h2 {
+  font-size: 2.55rem;
+  color: var(--white-color);
+}
+.polygon__inner a {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition-duration: 0.8s;
+  bottom: -200px;
+}
+.polygon__inner a span {
+  text-decoration: underline;
+}
+.polygon__inner a i {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.moving_svg {
+  overflow: hidden;
+}
+.moving_svg, .moving_svg * {
+  transition: all 1.6s cubic-bezier(0.61, -0.25, 0.1, 1.4);
+  transform-origin: 50% 50%;
+}
+.moving_svg .alternate_path, .moving_svg .alternate_g, .moving_svg .alternate_image {
+  visibility: hidden;
+}
+
 /*end project related general css code*/
 /* start nav */
 .nav {
@@ -229,6 +355,21 @@ also recommended to do the following:
   transform: translateX(-50%);
   position: fixed;
   background-color: var(--white-color);
+}
+
+.whiteNav.showNav .nav__item {
+  color: var(--slightly-black-color);
+}
+.whiteNav.showNav .nav__logo {
+  display: inline-block;
+  width: 106px;
+  height: 50px;
+  background-image: url(../assets/images/logo-green.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.whiteNav.showNav .nav__logo img {
+  display: none;
 }
 
 .alternateNav {
@@ -652,6 +793,24 @@ also recommended to do the following:
     font-size: 6.5px;
   }
 }
+@media only screen and (min-width: 721px) {
+  /* start nav */
+  .whiteNav .nav__item {
+    color: var(--white-color);
+  }
+  .whiteNav .nav__nested--item {
+    color: var(--slightly-black-color);
+  }
+  .whiteNav .alternateNav i {
+    color: var(--white-color);
+  }
+
+  .showNav {
+    padding: 2rem var(--site-padding);
+  }
+
+  /* end nav */
+}
 @media only screen and (max-width: 720.99px) {
   /* responsive */
   .responseBox {
@@ -668,6 +827,25 @@ also recommended to do the following:
     grid-column: 1/13;
   }
 
+  /* start polygon */
+  .polygon__inner a {
+    bottom: 0;
+  }
+
+  /* end polygon*/
+  /* start boxOf2MainRight */
+  .boxOf2MainRight .box__left--40,
+.boxOf2MainRight .box__right--60 {
+    grid-column: 1/13;
+  }
+  .boxOf2MainRight .box__item:first-of-type {
+    padding-right: var(--site-padding) !important;
+  }
+  .boxOf2MainRight .box__item:last-of-type {
+    padding-left: var(--site-padding) !important;
+  }
+
+  /* end boxOf2MainRight */
   /* start navs */
   .nav {
     flex-direction: column;
@@ -706,6 +884,14 @@ also recommended to do the following:
     font-size: 20px;
     margin-right: 15px;
     cursor: pointer;
+  }
+
+  .showNav .alternateNav i {
+    color: var(--slightly-black-color);
+  }
+  .showNav .nav__logo {
+    width: 85px;
+    height: 40px;
   }
 
   .nav__logo {

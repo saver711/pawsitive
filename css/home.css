@@ -158,25 +158,17 @@
 .happy__left {
   position: relative;
 }
-
 .happy__right {
   padding-right: var(--site-padding);
 }
-
-.happy__positioned {
-  position: absolute;
-}
-
 .happy__ball {
   top: 10vw;
   left: 30%;
 }
-
 .happy__food {
   top: 8vw;
   right: 2rem;
 }
-
 .happy__candy {
   top: 22vw;
   left: 37%;
@@ -184,70 +176,6 @@
 
 /* end happy section */
 /* start services1 section */
-.services1 .item__deco {
-  fill: var(--very-slight-white-color);
-}
-
-.service {
-  position: relative;
-}
-
-.services1__corner {
-  position: absolute;
-  width: 9rem;
-  height: 9rem;
-  right: 1.5rem;
-  top: -4.5rem;
-  border-radius: 50%;
-  background-color: var(--white-color);
-}
-
-.service__inner {
-  position: absolute;
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.service__inner:hover a {
-  bottom: 0;
-}
-.service__inner h2 {
-  font-size: 2.55rem;
-  color: var(--white-color);
-}
-.service__inner a {
-  color: var(--white-color);
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition-duration: 0.8s;
-  bottom: -200px;
-}
-.service__inner a span {
-  text-decoration: underline;
-}
-.service__inner a i {
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
-}
-
-.moving_svg {
-  overflow: hidden;
-}
-.moving_svg, .moving_svg * {
-  transition: all 1.6s cubic-bezier(0.61, -0.25, 0.1, 1.4);
-  transform-origin: 50% 50%;
-}
-.moving_svg .alternate_path, .moving_svg .alternate_g, .moving_svg .alternate_image {
-  visibility: hidden;
-}
-
 /* end services1 section */
 /* start ex section */
 .ex__list {
@@ -647,26 +575,5 @@
     grid-template-rows: -webkit-max-content;
     grid-template-rows: max-content;
   }
-}
-@media only screen and (max-width: 720.99px) {
-  /* start services1 */
-  .service__inner a {
-    bottom: 0;
-  }
-
-  /* end services1 */
-  /* start ex section */
-  .ex .box__left--40,
-.ex .box__right--60 {
-    grid-column: 1/13;
-  }
-  .ex .view__left {
-    padding-right: var(--site-padding) !important;
-  }
-  .ex .view__right {
-    padding-left: var(--site-padding) !important;
-  }
-
-  /* end ex section */
 }
 /* end responsive *//*# sourceMappingURL=home.css.map */

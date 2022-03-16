@@ -1,7 +1,6 @@
 "use strict";
 
 window.onload = function () {
-  commonJs();
   // /////////////////start inspiration
   //inspiration card vars
   const close = document.querySelector(".inspiration__close"),
@@ -235,40 +234,7 @@ window.onload = function () {
 
   //end slider oop
 
-  //  start translate on scroll
-  const translateOnScrolls = document.querySelectorAll(".translateOnScroll");
-  let translateValue = 0,
-    scrollPos = 0;
 
-  window.addEventListener("scroll", translateElementsOnScroll);
-
-  function translateElementsOnScroll() {
- 
-    let st = window.scrollY || document.documentElement.scrollTop;
-
-    if (st > scrollPos) {
-      // downscroll code
-      translateValue += 0.2;
-      translateOnScrolls.forEach((translateOnScroll) => {
-        const elementTopOffset = translateOnScroll.getBoundingClientRect().top;
-        if (elementTopOffset > -200 && elementTopOffset < window.innerHeight) {
-          translateOnScroll.style.transform = `translateY(${translateValue}px)`;
-        }
-      });
-    } else {
-      // upscroll code
-      translateValue -= 0.2;
-      translateOnScrolls.forEach((translateOnScroll) => {
-        const elementTopOffset = translateOnScroll.getBoundingClientRect().top;
-        if (elementTopOffset > -200 && elementTopOffset < window.innerHeight) {
-          translateOnScroll.style.transform = `translateY(${translateValue}px)`;
-        }
-      });
-    }
-    scrollPos = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-  }
-
-  //translateOnScroll.style.transform = `translateY(${translateValue}px)`;
 
   // hide popups when i click outside them
   window.addEventListener("click", ({ target }) => {
@@ -314,87 +280,6 @@ window.onload = function () {
     //
     //
   });
-
-  // start services sectio & svg animating
-  const moving_svgs = document.querySelectorAll(".moving_svg");
-
-  let original_path_style =
-      "transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg);",
-    original_g_style =
-      "transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg);",
-    original_image_style =
-      "transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg);";
-
-  moving_svgs.forEach((moving_svg, i) => {
-    //////////////////////////////\\\\\\path\\\\\\\////////////////
-    // get original_path
-    let original_path =
-        moving_svg.firstElementChild.firstElementChild.firstElementChild,
-      // get alternate_path
-      alternate_path = original_path.nextElementSibling,
-      //     get original d attr
-      original_path_d_attr = original_path.getAttribute("d"),
-      //     get alternate d attr
-      alternate_path_d_attr = alternate_path.getAttribute("d"),
-      //     get alternate style attr
-      alternate_path_style_attr = alternate_path.getAttribute("style");
-
-    //////////////////////////////\\\\\\g\\\\\\\////////////////
-    // get original_g
-    let original_g =
-        moving_svg.firstElementChild.firstElementChild.nextElementSibling,
-      // get alternate_g
-      alternate_g = original_g.nextElementSibling,
-      //     get alternate style attr
-      alternate_g_style_attr = alternate_g.getAttribute("style");
-
-    //////////////////////////////\\\\\\image\\\\\\\////////////////
-    // get original_image
-    let original_image = alternate_g.nextElementSibling.firstElementChild,
-      // get alternate_image
-      alternate_image = original_image.nextElementSibling,
-      //     get alternate style attr
-      alternate_image_style_attr = alternate_image.getAttribute("style");
-
-    // on mouseenter
-    moving_svg.addEventListener("mouseenter", () => {
-      //////////////////////////////\\\\\path\\\\\\////////////////
-      //     change original path d attr
-      original_path.setAttribute("d", alternate_path_d_attr);
-
-      //     change original path style attr
-      original_path.setAttribute("style", alternate_path_style_attr);
-
-      //////////////////////////////\\\\\\g\\\\\\\////////////////
-      //     change original g style attr
-      original_g.setAttribute("style", alternate_g_style_attr);
-
-      //////////////////////////////\\\\\\image\\\\\\\////////////////
-      //     change original image style attr
-      original_image.setAttribute("style", alternate_image_style_attr);
-    });
-
-    moving_svg.addEventListener("mouseleave", () => {
-      //////////////////////////////\\\\\path\\\\\\////////////////
-      //     change original path d attr again
-      original_path.setAttribute("d", original_path_d_attr);
-
-      //     change original path style attr again
-      original_path.setAttribute("style", original_path_style);
-
-      //////////////////////////////\\\\\\g\\\\\\\////////////////
-
-      //     change original g style attr again
-      original_g.setAttribute("style", original_g_style);
-
-      //////////////////////////////\\\\\\image\\\\\\\////////////////
-
-      //     change original image style attr again
-      original_image.setAttribute("style", original_image_style);
-    });
-  });
-
-  // end services sectio & svg animating
 
   //start prices
   class Prices {
