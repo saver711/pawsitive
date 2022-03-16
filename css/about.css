@@ -56,19 +56,6 @@
        column-gap: 2rem;
   row-gap: 7rem;
 }
-.achieve svg {
-  width: 7rem;
-  height: 7rem;
-}
-.achieve__title {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin: 1.8rem 0;
-}
-.achieve__text {
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
 
 /* start achieve */
 /* start meet */
@@ -128,29 +115,6 @@
 .welcome__semiLabel {
   margin-bottom: 3rem;
   font-size: 1.3rem;
-}
-
-.welcome__piece {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
-}
-.welcome__piece svg {
-  display: inline-block;
-  width: 8rem;
-  height: 8rem;
-  margin-right: 1.2rem;
-}
-.welcome__piece--title {
-  font-size: 1.8rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-.welcome__piece--p {
-  font-size: 1.4rem;
-  max-width: 44rem;
-  line-height: 1.5;
 }
 
 /* ////////////// end welcome */

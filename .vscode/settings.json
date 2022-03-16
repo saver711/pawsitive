@@ -1,10 +1,17 @@
 {
     "cSpell.ignoreWords": [
+        "Lastname",
+        "Regx",
+        "Zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž",
+        "allRequired",
         "elemnts",
         "hamdi",
         "nums",
         "padd",
         "servs",
-        "svgs"
+        "svgs",
+        "timedate",
+        "ÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹ",
+        "ÇŒÆČŠŽ"
     ]
 }

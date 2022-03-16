@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawsitive - Contact us</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/images/favicon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- start css -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <!-- my css -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+
+
+    <!-- end css -->
+
+    <!-- start js -->
+
+    <!-- my js -->
+    <script src="../js/common.js" defer></script>
+    <!-- end js -->
+</head>
+
+
+    <!-- start header -->
+    <header class="view  viewContact paddB-35">
+        <div class="nav-container">
+            <nav class="nav">
+                <i class="fa-solid fa-xmark nav__close"></i>
+                <a href="#" class="nav__logo">
+                    <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
+                </a>
+                <div class="nav__right">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html">home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html">about</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="services.html">services</a>
+                            <i class="fa-solid fa-angle-down nav__icon"></i>
+                            <ul class="nav__nested">
+                                <div class="nav__nested--items-box">
+                                    <li class="nav__nested--item">
+                                        <a href="#">dropdown link 1</a>
+                                    </li>
+                                    <li class="nav__nested--item">
+                                        <a href="#">dropdown link 2</a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="blog.html">blog</a></li>
+                        <li class="nav__item">
+                            <a href="store.html">store</a>
+                            <i class="fa-solid fa-angle-down nav__icon"></i>
+                            <ul class="nav__nested">
+                                <div class="nav__nested--items-box">
+                                    <li class="nav__nested--item">
+                                        <a href="cart.html">cart</a>
+                                    </li>
+                                    <li class="nav__nested--item">
+                                        <a href="checkout.html">checkout</a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav__item active">
+                            <a href="#">contact</a>
+                        </li>
+
+                        <span class="nav__under">
+                            <span class="nav__under--1"></span><span class="nav__under--2"></span><span
+                                class="nav__under--3"></span><span class="nav__under--4"></span>
+                        </span>
+                    </ul>
+
+                    <div class="nav__user">
+                        <!-- <a class="nav__person" href="account.html">
+                  <img
+                    src="../assets/images/random-person.webp"
+                    alt="user photo"
+                  />
+                </a> -->
+                        <div class="nav__log">
+                            <p>log in</p>
+                            <div class="custom-shape-divider-bottom-1646521459">
+                                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                                    preserveAspectRatio="none">
+                                    <path
+                                        d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
+                                        class="shape-fill"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="form-container nav__form-container">
+                            <ul class="formSplit">
+                                <li class="formSplit__item active" data-target="logInForm">
+                                    log in
+                                </li>
+                                <li class="formSplit__item" data-target="signUpForm">
+                                    sign up
+                                </li>
+                            </ul>
+                            <form action="" name="logInForm" class="form nav__form">
+                                <div class="form__content">
+                                    <label for="loginEmail">E-Mail:</label>
+                                    <input type="text" id="loginEmail" name="loginEmail" />
+                                    <p class="form__error">Write a valid E-Mail.</p>
+                                    <label for="loginPassword">Password:</label>
+                                    <input type="password" class="" id="loginPassword" name="loginPassword" />
+                                    <p class="form__error"></p>
+
+                                    <p class="form__showPassword">
+                                        <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
+                                        <label for="loginShowPassword">show password</label>
+                                    </p>
+
+                                    <input type="submit" class="mainBtn" value="log in" />
+
+                                    <div class="form__splitter">
+                                        <span class="form__splitter--circle">or</span>
+                                    </div>
+
+                                    <a href="#" class="fb form__social">
+                                        <i class="fa-brands fa-facebook-f"></i> Login with Facebook
+                                    </a>
+                                    <a href="#" class="twitter form__social">
+                                        <i class="fa-brands fa-twitter"></i> Login with Twitter
+                                    </a>
+                                </div>
+                            </form>
+
+                            <form action="" name="signUpForm" class="form nav__form">
+                                <div class="form__content">
+                                    <label for="signEmail">E-Mail:</label>
+                                    <input type="text" id="signEmail" name="signEmail" />
+                                    <p class="form__error">Write a valid E-Mail.</p>
+
+                                    <label for="signPassword">Password:</label>
+                                    <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
+                                    <p class="form__error"></p>
+                                    <p class="form__showPassword">
+                                        <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
+                                        <label for="signShowPassword">show password</label>
+                                    </p>
+
+                                    <input type="submit" class="mainBtn" value="sign up" />
+
+                                    <div class="form__splitter">
+                                        <span class="form__splitter--circle">or</span>
+                                    </div>
+
+                                    <a href="#" class="fb form__social">
+                                        <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
+                                    </a>
+                                    <a href="#" class="twitter form__social">
+                                        <i class="fa-brands fa-twitter"></i> sign up with Twitter
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="alternateNav">
+                <i class="fa-solid fa-bars"></i>
+                <a href="#" class="nav__logo">
+                    <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
+                </a>
+            </nav>
+
+            
+        </div>
+
+        <div class="main-container">
+            <div class=" viewContact__text headingComponent">
+                <h3 class="headingComponent__semiHead">contact us</h3>
+                <h2 class=" viewContact__head siteHeading headingComponent__head"><span>Happy to welcome you</span>Contact us & Ask for Services</h2>
+
+                <p class=" headingComponent__text">
+                    We want to offer your pets compassionate and nurturing care by providing services that are safe and to give our human clients peace of mind.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="section__bottomSvg">
+            <img src="../assets/images/viewAbout__bottom.webp" alt="section bottom svg">
+        </div>
+
+    </header>
+    <!-- end header -->
+
+    <!-- start formContainer -->
+    <section class="formContainer paddTB-35">
+        <div class="main-container">
+            <div class="box boxOf2">
+                <div class="box__left--50">
+                  <div class="formContainer__left">
+                    <div class="welcome__piece">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#7ac143;}.cls-2{fill:#282828;}</style></defs><title>_</title><circle class="cls-1" cx="50" cy="51" r="32"></circle><path class="cls-2" d="M80.82,89.4a2.59,2.59,0,0,1-2.39-1.32L72.94,80l-.61.49A34.53,34.53,0,0,1,50,88.23a35.91,35.91,0,0,1-22.34-7.55l-.61-.47L21.76,88a2.58,2.58,0,0,1-2.41,1.35,2.41,2.41,0,0,1-1.56-.51,2.59,2.59,0,0,1-1.33-1.82,3.12,3.12,0,0,1,.49-2.25l5.35-8.2.57-.53-.47-.52a34.94,34.94,0,0,1-9.19-24.14,38.53,38.53,0,0,1,3.45-15.78l.13-.3L16.65,35A13.31,13.31,0,0,1,11.53,25c0-3.88,1.89-7.53,5.62-10.83l.2-.2a14.94,14.94,0,0,1,8.8-3.33,11,11,0,0,1,2,.18c3.05.53,5.89,2.41,8.44,5.6l.19.23.35,0A42.07,42.07,0,0,1,50,14.47a35.64,35.64,0,0,1,12.64,2.3l.3.11.33-.16q3.91-4.84,8.81-5.78a13,13,0,0,1,1.8-.12A14.77,14.77,0,0,1,82.7,14l.07.13c3.78,3.21,5.7,6.86,5.7,10.83a12.85,12.85,0,0,1-4.93,9.83l-.25.21,0,.37a38.56,38.56,0,0,1,3.36,16,36.54,36.54,0,0,1-8.87,24.17l-.43.51.63.64,5.44,8.1c1,1.77.74,3-.95,4A2.19,2.19,0,0,1,80.82,89.4ZM50,20.39a29.44,29.44,0,0,0-21.71,9.18,30.27,30.27,0,0,0-9,21.86,30,30,0,0,0,9,21.78A29.57,29.57,0,0,0,50,82.31,29.43,29.43,0,0,0,71.7,73.13a30.25,30.25,0,0,0,9-21.86,30,30,0,0,0-9-21.78A29.57,29.57,0,0,0,50,20.39ZM25.88,16.79a7.79,7.79,0,0,0-4.81,2.1c-2.29,1.93-3.45,3.92-3.45,5.92a8.73,8.73,0,0,0,1.8,4.42l.56.85.62-.81a38.51,38.51,0,0,1,10-9.21l.83-.53-.76-.64a7.88,7.88,0,0,0-3.9-2A4.42,4.42,0,0,0,25.88,16.79Zm48.25,0a4.7,4.7,0,0,0-1,.11,7.78,7.78,0,0,0-3.83,2l-.76.64.84.53a38.64,38.64,0,0,1,10,9.21l.5.66.59-.59a6.21,6.21,0,0,0,1.89-4.53c0-2-1.16-4-3.44-5.92A7.82,7.82,0,0,0,74.12,16.79Z"></path><path class="cls-2" d="M60.89,65.28a2.45,2.45,0,0,1-2-.92L47.83,53.43a3.47,3.47,0,0,1-.79-2V31.34a3.06,3.06,0,0,1,.88-2.25,2.92,2.92,0,0,1,4.17,0A3.07,3.07,0,0,1,53,31.34V50L63.05,60.15a3.14,3.14,0,0,1,1.13,2.15,2.93,2.93,0,0,1-1.11,2A3,3,0,0,1,60.89,65.28Z"></path></svg>
+
+                        <div class="welcome__piece--text">
+                            <h3 class="welcome__piece--title">OPENING HOURS
+                            </h3>
+
+                            <p class="welcome__piece--p">
+                                Weekdays: 9:00am - 5.00pm
+                            </p>
+                            <p class="welcome__piece--p">
+                                Weekends: 9:00am - 12:00pm
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="welcome__piece">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#7ac143;}.cls-2{fill:#282828;}</style></defs><title>Icons-Pawsitive</title><path class="cls-1" d="M38.19,15.52A22.81,22.81,0,1,0,49.1,58.38a23.12,23.12,0,0,0,9.13-9.14A22.84,22.84,0,0,0,38.19,15.52ZM35,41a6,6,0,1,1,6-6A6,6,0,0,1,35,41Z"></path><path class="cls-2" d="M63.34,89.71a3,3,0,0,1-2.14-5.18L65.72,80l-4-4-2.86,2.86a3,3,0,0,1-4.29-4.29l2.86-2.86L49.68,64l-.19.08a28.4,28.4,0,0,1-11.16,2.32,28,28,0,1,1,28-28,28.37,28.37,0,0,1-2.32,11.16l-.08.19,22.9,22.89a9.73,9.73,0,0,1,0,13.72l-.57.58a9.74,9.74,0,0,1-13.72,0L70,84.29l-4.52,4.52A3,3,0,0,1,63.34,89.71ZM60.6,55.37a28.35,28.35,0,0,1-5.23,5.23l-.27.21L76.87,82.58a3.61,3.61,0,0,0,2.57,1.06A3.65,3.65,0,0,0,82,82.57l.56-.56a3.65,3.65,0,0,0,0-5.14L60.81,55.09Zm-22.27-39A22,22,0,1,0,48.85,57.64a22.26,22.26,0,0,0,8.8-8.8A22,22,0,0,0,38.34,16.36Z"></path><path class="cls-2" d="M35,44.7A9.7,9.7,0,1,1,44.7,35,9.71,9.71,0,0,1,35,44.7Zm0-13.33A3.63,3.63,0,1,0,38.64,35,3.64,3.64,0,0,0,35,31.36Z"></path></svg>
+
+                        <div class="welcome__piece--text">
+                            <h3 class="welcome__piece--title">PICKUP AND COLLECTION TIMES</h3>
+
+                            <p class="welcome__piece--p">
+                                Weekdays: 9:30am - 11:00am and 4:00pm - 5:00pm
+                            </p>
+                            <p class="welcome__piece--p">
+                                Weekdays: 9:30am - 11:00am
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="welcome__piece">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#7ac143;}.cls-2{fill:#282828;}</style></defs><title>Icons-Pawsitive</title><polygon class="cls-1" points="44.85 50 66.98 36.48 44.85 22.95 44.85 50"></polygon><path class="cls-2" d="M41.73,77.81a3,3,0,0,1-3-3V13.63a3,3,0,0,1,6,0V16.9l28.32,17.3a3,3,0,0,1,1.44,2.57,3,3,0,0,1-1.44,2.57L44.74,56.65V74.8A3,3,0,0,1,41.73,77.81Zm3-28.21,21-12.82L44.74,24Z"></path><path class="cls-2" d="M41.73,89.38c-9.1,0-16.23-5-16.23-11.28a9.54,9.54,0,0,1,3.75-7.29,3,3,0,1,1,3.85,4.63,3.77,3.77,0,0,0-1.58,2.66c0,2.49,4.2,5.26,10.22,5.26S52,80.59,52,78.1a3.73,3.73,0,0,0-1.49-2.58A3,3,0,1,1,54.4,71,9.39,9.39,0,0,1,58,78.1C58,84.43,50.84,89.38,41.73,89.38Z"></path></svg>
+
+                        <div class="welcome__piece--text">
+                            <h3 class="welcome__piece--title">ADDRESS</h3>
+
+                            <p class="welcome__piece--p">
+                                2345 South Road, Green Meadows VIC 3977.
+                            </p>
+
+                            <p class="welcome__piece--p">
+                                Only 45 mins from Melbourne CBD.
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box__right--50">
+                  <div class="formContainer__right">
+                      <form action="" class="contactForm myForm">
+                          <input required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" title="No Numbers Just Letters" name="name" type="text" placeholder="Name">
+                          <input required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" title="No Numbers Just Letters" name="lastname" type="text" placeholder="Lastname">
+                          <input required pattern="^([a-zA-Z])([\w\d\._-]+)?@[a-z\d-]+\.[a-z]{2,}(\.[a-z]{2,})?$" title="eg: ahwork711@gmail.com" name="email" type="email" placeholder="E-mail">
+                          <input required pattern="/^+201\d{9}$/" title="eg: +201126183678" name="tel" type="tel" placeholder="Phone number">
+                          <input required title="we need date to serve you in" name="timedate" type="datetime-local" placeholder="Choose a date">
+                          <select name="service">
+                              <option value="1">dog boarding</option>
+                              <option value="2">cat boarding</option>
+                              <option value="3">pet spa & grooming</option>
+                          </select>
+
+                          <textarea name="msg" cols="30" rows="10" placeholder="Message"></textarea>
+
+                          <input type="submit" value="send" name="submit" class="mainBtn">
+
+                      </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- end formContainer -->
+
+    <!-- start singleSec2 -->
+
+    <!-- end singleSec2 -->
+
+
+
+
+    <!-- start footer -->
+    <footer class="footer paddTB-35">
+        <div class="main-container">
+          <div class="box responseBox">
+            <div class="box__left--25">
+              <div class="footer__div">
+                <a href="#" class="footer__logo">
+                  <img src="../assets/images/logo_orange.webp" alt="logo">
+                </a>
+  
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#">
+                      <i class="fa-brands fa-twitter"></i>
+  
+                    </a>
+                  </li>
+  
+                  <li class="footer__item">
+                    <a href="#">
+  
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+  
+                  <li class="footer__item">
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box__middle1--25">
+              <div class="footer__div">
+                <h2 class="footer__title">about</h2>
+              <a href="#" class="footer__link">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>PO BOX Collins Street West</span>
+              </a>
+  
+              <a href="tel:+201126183678" class="footer__link">
+                <i class="fa-solid fa-phone-flip"></i>
+                <span>+2342 5446 67</span>
+              </a>
+  
+              <div class="footer__link">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sun: 8AM - 8PM</span>
+              </div>
+              </div>
+              
+            </div>
+            <div class="box__middle2--25">
+              <div class="footer__div">
+                <h2 class="footer__title">quick links</h2>
+              <a href="#" class="footer__link">
+                Dog Boarding Services
+              </a>
+  
+              <a href="#" class="footer__link">
+                Cat Boarding Services
+              </a>
+  
+              <a href="#" class="footer__link">
+                Spa and Grooming Services
+              </a>
+              </div>
+            </div>
+            <div class="box__right--25">
+              <div class="footer__div">
+                <h2 class="footer__title">get in touch</h2>
+  
+                <a href="contact.html" class="mainBtn footer__contact">contact us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    
+        
+
+
+
+</body>
+
+</html>

@@ -47,12 +47,19 @@ ul {
   list-style: none;
 }
 
-input {
-  padding: 3px 5px;
+select, input, textarea {
   outline: none;
 }
-input:active {
+select:active, input:active, textarea:active {
   outline: none;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+input {
+  padding: 3px 5px;
 }
 
 input[type=submit] {
@@ -80,6 +87,7 @@ also recommended to do the following:
 1- divide the site into styling similar components
 2- set general font size to the p, all h elements p{font-size: 'value'rem}
 3- set general line-height for p element (1.56 for example)
+4- set *{transition : all .15s ease}
 */
 /* end general css */
 /*start project related general css code*/
@@ -194,6 +202,12 @@ also recommended to do the following:
   text-transform: capitalize;
   font-size: 4rem;
   margin-top: 2rem;
+  text-transform: none;
+}
+.headingComponent__text {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+  max-width: 55rem;
 }
 
 .box {
@@ -323,6 +337,80 @@ header .headingComponent {
 }
 .moving_svg .alternate_path, .moving_svg .alternate_g, .moving_svg .alternate_image {
   visibility: hidden;
+}
+
+.piece1 svg {
+  width: 7rem;
+  height: 7rem;
+}
+.piece1__title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 1.8rem 0;
+  text-transform: uppercase;
+}
+.piece1__text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.card1 {
+  padding: 5rem 3rem;
+  box-shadow: 0 5px 10px 2px var(--dark-white-color);
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 4rem;
+  height: 100%;
+}
+.card1:hover {
+  box-shadow: none;
+}
+.card1 svg {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+.card1__title {
+  font-size: 2rem;
+}
+.card1__text {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 2.6rem;
+}
+.card1__link {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.showNav {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.welcome__piece {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+.welcome__piece svg {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1.2rem;
+}
+.welcome__piece--title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.welcome__piece--p {
+  font-size: 1.4rem;
+  max-width: 44rem;
+  line-height: 1.5;
+}
+.welcome__piece--p:not(:first-of-type) {
+  margin-top: 0.5rem;
 }
 
 /*end project related general css code*/

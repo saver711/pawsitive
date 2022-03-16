@@ -235,52 +235,6 @@ window.onload = function () {
   //end slider oop
 
 
-
-  // hide popups when i click outside them
-  window.addEventListener("click", ({ target }) => {
-    // start manage nav dropdowns
-    if (
-      !target.classList.contains("nav__nested") &&
-      !target.classList.contains("fa-angle-up") &&
-      !target.classList.contains("nav__nested--item") &&
-      !target.classList.contains("nav__nested--items-box")
-    ) {
-      navs__nested.forEach((nested) => {
-        nested.classList.remove("open");
-      });
-
-      nav__icons.forEach((icon) => {
-        icon.classList.remove("fa-angle-up");
-        icon.classList.add("fa-angle-down");
-      });
-    }
-    // end manage nav dropdowns
-
-    //start nav__form
-    if (target.closest(".nav__form-container") || target.closest(".nav__user"))
-      return;
-    else nav__formContainer.classList.remove("open");
-    setTimeout(() => {
-      if(nav__log) nav__log.classList.remove("clicked");
-      
-    }, 400);
-
-    //end nav__form
-    if (
-      (!target.closest(".nav__close") && target.closest(".nav")) ||
-      target.closest(".fa-bars")
-    )
-      return;
-    else siteNav.classList.remove("open");
-    //start side nav
-
-    // end side nav
-    //
-    //
-    //
-    //
-  });
-
   //start prices
   class Prices {
     constructor(container) {

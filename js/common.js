@@ -195,6 +195,59 @@ function commonJs () {
     });
   });
 
+  // start form oop authentication
+  // let checkValid = false;
+  // class Auth{
+  //   constructor(form){
+  //     this.form = form
+  //   }
+
+  //   dealWithRequired(){
+  //     const allRequired = this.form.querySelectorAll('.required');
+
+  //     for(let i = 0; i < allRequired.length; i++){
+  //       const field = allRequired[i],
+  //             getFieldRegx = field.dataset.regex,
+  //             fieldValue = field.value
+
+  //       if(getFieldRegx) {
+  //         const fieldRegx = new RegExp(getFieldRegx)
+  //         if(fieldRegx.test(fieldValue)){
+  //           console.log('ok');
+  //           // checkValid = true
+  //         } else{
+  //           console.log(field);
+  //         }
+  //       }
+        
+  //     }
+  //   }
+
+  //   handleAll(){
+  //     this.dealWithRequired()
+  //   }
+  // }
+
+
+  // let myForms = document.querySelectorAll('.myForm')
+
+  // myForms.forEach(myForm=>{
+  //   myForm.addEventListener('click', (e)=>{
+  //     const fromAuthObj = new Auth(myForm);
+  //     fromAuthObj.handleAll();
+  //     // if (checkValid){
+  //     //   myForm.submit();
+  //     // } else{
+  //     //   e.preventDefault();
+  //     // }
+      
+  //   })
+  // })
+
+    // end form oop authentication
+
+  
+
   //start form authentication
   let checkValid = false;
   document.logInForm.addEventListener("submit", function (e) {
@@ -204,7 +257,6 @@ function commonJs () {
       document.logInForm.loginPassword
     );
     if(checkValid) document.logInForm.submit();
-    // checkValid ?? document.logInForm.submit(); // not supported in old browsers
   });
 
   document.signUpForm.addEventListener("submit", function (e) {
@@ -487,4 +539,4 @@ function commonJs () {
   //
 };
 
-window.onload = commonJs ();
+window.onload = commonJs();

@@ -21,6 +21,12 @@
     .mainBtn2{
         margin-top: 2rem;
     }
+
+    &__p{
+            font-size: 1.7rem;
+            margin: 2rem 0;
+            max-width: 60rem;
+    }
 }
 /* end header */
 
@@ -53,6 +59,11 @@
     &__title{
         font-size: 2.7rem;
         text-transform: capitalize;
+        transition: color .12s ease;
+
+        &:hover{
+            color: var(--primary-color);
+        }
     }
 
     &__item{
@@ -115,9 +126,7 @@
         margin-bottom: 2rem;
     }
 }
-.addon{
 
-}
 /* end addon */
 
 /* start dogs */
@@ -132,3 +141,46 @@
     }
 }
 /* end dogs */
+
+
+////////////////////////////////
+/* start single-service page */
+
+/* start singleSec2 */
+.singleSec2{
+    // background-color: #ddd;
+
+    .sectionTitle{
+        margin-top: 0;
+        font-size: 4rem;
+    }
+
+    &__text{
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+    .plusCart{
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+}
+/* end singleSec2 */
+
+/* start more */
+.more{
+    .box{
+        -moz-column-gap: 3rem;
+        column-gap: 3rem;
+        grid-template-rows: -webkit-max-content;
+        grid-template-rows: max-content;
+    }
+    .sectionLeftHeadingBlack{
+        font-size: 3.6rem;
+        margin-bottom: 2.6rem;
+        text-transform: capitalize;
+    }
+}
+/* end more */
+/* end single-service page */

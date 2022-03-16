@@ -21,6 +21,11 @@
 .viewServices .mainBtn2 {
   margin-top: 2rem;
 }
+.viewServices__p {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+  max-width: 60rem;
+}
 
 /* end header */
 /* start servs */
@@ -45,6 +50,10 @@
 .servs__title {
   font-size: 2.7rem;
   text-transform: capitalize;
+  transition: color 0.12s ease;
+}
+.servs__title:hover {
+  color: var(--primary-color);
 }
 .servs__item {
   font-size: 1.4rem;
@@ -104,4 +113,35 @@
   padding-left: var(--site-padding);
 }
 
-/* end dogs *//*# sourceMappingURL=services.css.map */
+/* end dogs */
+/* start single-service page */
+/* start singleSec2 */
+.singleSec2 .sectionTitle {
+  margin-top: 0;
+  font-size: 4rem;
+}
+.singleSec2__text {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.singleSec2 .plusCart:first-child {
+  margin-top: 0;
+}
+
+/* end singleSec2 */
+/* start more */
+.more .box {
+  -moz-column-gap: 3rem;
+  column-gap: 3rem;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+}
+.more .sectionLeftHeadingBlack {
+  font-size: 3.6rem;
+  margin-bottom: 2.6rem;
+  text-transform: capitalize;
+}
+
+/* end more */
+/* end single-service page *//*# sourceMappingURL=services.css.map */
