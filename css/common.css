@@ -413,6 +413,14 @@ header .headingComponent {
   margin-top: 0.5rem;
 }
 
+.contPaddLeft {
+  padding-left: var(--site-padding);
+}
+
+.contPaddRight {
+  padding-right: var(--site-padding);
+}
+
 /*end project related general css code*/
 /* start nav */
 .nav {
@@ -803,6 +811,12 @@ header .headingComponent {
 .box__right--30 {
   grid-column: 9/13;
 }
+.box__left--30 {
+  grid-column: 1/5;
+}
+.box__right--70 {
+  grid-column: 5/13;
+}
 .box__left--50 {
   grid-column: 1/7;
 }
@@ -862,10 +876,6 @@ header .headingComponent {
   .sectionTitle {
     margin-top: 3rem;
   }
-
-  .box__left--60, .box__right--40 {
-    grid-column: 1/13;
-  }
 }
 @media only screen and (max-width: 950.99px) {
   /* general */
@@ -900,6 +910,11 @@ header .headingComponent {
   /* end nav */
 }
 @media only screen and (max-width: 720.99px) {
+  /* global */
+  .noPaddLeftInMobile {
+    padding-left: 0 !important;
+  }
+
   /* responsive */
   .responseBox {
     grid-template-columns: 1fr;
@@ -908,6 +923,14 @@ header .headingComponent {
     grid-column: auto;
     width: 60%;
     margin: 0 auto;
+  }
+
+  .boxOf2 {
+    grid-template-columns: 1fr;
+  }
+  .boxOf2 > div:first-of-type, .boxOf2 > div:last-of-type {
+    grid-column: 1/13;
+    padding-right: 0;
   }
 
   /* responsive */
@@ -922,14 +945,10 @@ header .headingComponent {
 
   /* end polygon*/
   /* start boxOf2MainRight */
-  .boxOf2MainRight .box__left--40,
-.boxOf2MainRight .box__right--60 {
-    grid-column: 1/13;
-  }
-  .boxOf2MainRight .box__item:first-of-type {
+  .boxOf2MainRight .box__item:first-of-type, .boxOf2MainLeft .box__item:first-of-type {
     padding-right: var(--site-padding) !important;
   }
-  .boxOf2MainRight .box__item:last-of-type {
+  .boxOf2MainRight .box__item:last-of-type, .boxOf2MainLeft .box__item:last-of-type {
     padding-left: var(--site-padding) !important;
   }
 
@@ -1057,7 +1076,9 @@ header .headingComponent {
 @media only screen and (max-width: 450.99px) {
   /* responsive */
   .responseBox > div {
-    width: 86%;
+    width: 100%;
   }
+
+  /* general */
 }
 /* end responsive *//*# sourceMappingURL=common.css.map */

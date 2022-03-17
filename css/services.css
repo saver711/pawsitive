@@ -77,9 +77,6 @@
 .cats__title span {
   display: inline-block;
 }
-.cats .plusCart {
-  max-width: 85%;
-}
 .cats__left {
   position: relative;
 }
@@ -109,12 +106,14 @@
 .dogs .sectionTitle {
   margin-bottom: 3rem;
 }
-.dogs__left {
-  padding-left: var(--site-padding);
-}
 
 /* end dogs */
 /* start single-service page */
+.singleSec1 .box {
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+}
+
 /* start singleSec2 */
 .singleSec2 .sectionTitle {
   margin-top: 0;

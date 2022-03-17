@@ -32,6 +32,7 @@
   background-color: var(--very-slight-white-color);
   padding: 3rem;
   width: 100%;
+  border-radius: 4rem;
 }
 .contactForm input, .contactForm select, .contactForm textarea {
   padding: 1.2rem 1.8rem;
@@ -56,4 +57,57 @@
   text-transform: uppercase;
 }
 
-/* end form *//*# sourceMappingURL=contact.css.map */
+/* end form */
+/* start map */
+.map .box {
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.map .addressCard {
+  border-radius: 3.5rem;
+  overflow: hidden;
+  background-color: var(--very-slight-white-color);
+}
+.map .addressCard__body {
+  padding: 2rem;
+}
+.map .addressCard__body svg {
+  max-width: 4.6rem;
+  max-height: 4.6rem;
+}
+.map__right {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.map__right .map__frame {
+  width: 100%;
+  height: 100%;
+}
+.map__right img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* end map */
+@media only screen and (max-width: 720.99px) {
+  .map__frame {
+    min-height: 42vw;
+  }
+
+  .formContainer .contPaddLeft {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 450.99px) {
+  .map__frame {
+    min-height: 60vw;
+  }
+}/*# sourceMappingURL=contact.css.map */

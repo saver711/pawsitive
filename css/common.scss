@@ -472,6 +472,13 @@ header{
   }
 }
 
+.contPaddLeft{
+  padding-left: var(--site-padding);
+}
+.contPaddRight{
+  padding-right: var(--site-padding);
+}
+
 /*end project related general css code*/
 
 /* start nav */
@@ -928,6 +935,13 @@ padding: 1rem 2.3rem;
     grid-column: 9 / 13;
   }
 
+  &__left--30{
+    grid-column: 1 / 5;
+  }
+  &__right--70{
+    grid-column: 5 / 13;
+  }
+
 
   &__left--50{
     grid-column: 1 / 7;
@@ -1002,9 +1016,9 @@ padding: 1rem 2.3rem;
   .sectionTitle{
     margin-top: 3rem;
   }
-  .box__left--60, .box__right--40 {
-    grid-column: 1/13;
-  }
+  // .box__left--60, .box__right--40 {
+  //   grid-column: 1/13;
+  // }
 }
 
 
@@ -1072,6 +1086,10 @@ padding: 1rem 2.3rem;
 }
 
 @media only screen and (max-width: 720.99px) {
+  /* global */
+  .noPaddLeftInMobile{
+    padding-left: 0!important;
+  }
   /* responsive */
     .responseBox {
       grid-template-columns: 1fr;
@@ -1081,6 +1099,16 @@ padding: 1rem 2.3rem;
         width: 60%;
         margin: 0 auto;
       }
+    }
+
+    .boxOf2{
+      grid-template-columns: 1fr;
+      & > div:first-of-type, & > div:last-of-type{
+      grid-column: 1 / 13;
+      // padding-left: 0;
+      padding-right: 0;
+    }
+
     }
 
 
@@ -1100,11 +1128,11 @@ padding: 1rem 2.3rem;
   /* end polygon*/
 
    /* start boxOf2MainRight */
-   .boxOf2MainRight {
-    .box__left--40,
-    .box__right--60 {
-      grid-column: 1 / 13;
-    }
+   .boxOf2MainRight, .boxOf2MainLeft {
+    // .box__left--40,
+    // .box__right--60 {
+    //   grid-column: 1 / 13;
+    // }
 
     .box__item:first-of-type {
       padding-right: var(--site-padding) !important;
@@ -1114,6 +1142,21 @@ padding: 1rem 2.3rem;
       padding-left: var(--site-padding) !important;
     }
   }
+
+  // .boxOf2MainLeft {
+  //   // .box__left--40,
+  //   // .box__right--60 {
+  //   //   grid-column: 1 / 13;
+  //   // }
+
+  //   .box__item:first-of-type {
+  //     padding-right: var(--site-padding) !important;
+  //   }
+
+  //   .box__item:last-of-type {
+  //     padding-left: var(--site-padding) !important;
+  //   }
+  // }
   /* end boxOf2MainRight */
 
 
@@ -1255,9 +1298,17 @@ padding: 1rem 2.3rem;
   /* responsive */
     .responseBox {
       & > div {
-        width: 86%;
+        width: 100%;
       }
     }
+
+    /* general */
+    // .contPaddLeft{
+    //   padding-left: 0
+    // }
+    // .contPaddRight{
+    //   padding-right: 0;
+    // }
 
 
 }

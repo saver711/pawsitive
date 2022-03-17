@@ -16,9 +16,6 @@
 .view{
   position: relative;
 }
-.view__left{
-    padding-left:var(--site-padding);
-}
 
 
 .view__main{
@@ -171,9 +168,6 @@
     position: relative;
   }
   
-  &__right{
-    padding-right:var(--site-padding);
-  }
   
   
   &__ball{
@@ -634,9 +628,6 @@ height: 100%;
     }
   }
 
-  .happy__right {
-    padding-left: var(--site-padding);
-  }
 
   //prices
   .prices .box{

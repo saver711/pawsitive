@@ -18,10 +18,6 @@
   position: relative;
 }
 
-.view__left {
-  padding-left: var(--site-padding);
-}
-
 .view__main {
   background-size: cover;
   background-image: url(../assets/images/heroBack.webp);
@@ -157,9 +153,6 @@
 /* start happy section */
 .happy__left {
   position: relative;
-}
-.happy__right {
-  padding-right: var(--site-padding);
 }
 .happy__ball {
   top: 10vw;
@@ -554,10 +547,6 @@
   }
   .happy__title span {
     display: inline-block;
-  }
-
-  .happy__right {
-    padding-left: var(--site-padding);
   }
 
   .prices .box {

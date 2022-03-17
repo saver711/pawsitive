@@ -97,9 +97,6 @@
         }
     }
 
-    .plusCart{
-        max-width: 85%;
-    }
 
     &__left{
         position: relative;
@@ -136,15 +133,18 @@
         margin-bottom: 3rem;
 
     }
-    &__left{
-        padding-left: var(--site-padding);
-    }
 }
 /* end dogs */
 
 
 ////////////////////////////////
 /* start single-service page */
+
+.singleSec1{
+    .box{
+        column-gap: 1.2rem;
+    }
+}
 
 /* start singleSec2 */
 .singleSec2{
