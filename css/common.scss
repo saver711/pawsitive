@@ -88,6 +88,134 @@ also recommended to do the following:
 3- set general line-height for p element (1.56 for example)
 4- set *{transition : all .15s ease}
 */
+
+// ∞∞ browser specific ∞∞ */ i will add it to new project
+
+/* ∞∞ IE ∞∞ */
+// 	article,
+// 	aside,
+// 	details,
+// 	figcaption,
+// 	figure,
+// 	footer,
+// 	header,
+// 	main,
+// 	menu,
+// 	nav,
+// 	section,
+// 	summary {
+//   	display: block;
+// 	}
+	
+// 	audio,
+// 	canvas,
+// 	progress,
+// 	video {
+//   	display: inline-block;
+//   	vertical-align: baseline;
+// 	}
+
+// 	a {
+//   	background-color: transparent;
+// 	}
+
+// 	button {
+//   	overflow: visible;
+// 	}
+
+// 	html {
+//   	-ms-text-size-adjust: 100%;
+// 	}
+
+// 	img {
+//   	border: none;
+// 	}
+
+// 	input[type="checkbox"],
+// 	input[type="radio"] {
+//   	box-sizing: border-box;
+//   	padding: 0;
+// 	}
+
+// 	legend {
+//   	border: none;
+//   	padding: 0;
+// 	}
+
+// 	mark {
+//   	background: #ff0;
+//   	color: #000;
+// 	}
+
+// 	svg:not(:root) {
+//   	overflow: hidden;
+// 	}
+
+// 	textarea {
+//   	overflow: auto;
+// 	}
+
+// /* ∞∞ moz ∞∞ */
+// 	body {
+// 		-moz-osx-font-smoothing: grayscale;
+// 	}
+
+// 	button::-moz-focus-inner,
+// 	input::-moz-focus-inner {
+//   	border: none;
+//   	padding: 0;
+// 	}
+
+// 	input {
+//   	line-height: normal;
+// 	}
+
+// /* ∞∞ webkit ∞∞ */
+// 	* {
+// 		-webkit-margin-before: 0;
+// 		-webkit-margin-after: 0;
+// 	}
+
+// 	html {
+//   	-webkit-text-size-adjust: 100%;
+// 	}
+
+// 	body {
+// 		-webkit-font-smoothing: antialiased !important;
+// 	}
+
+// 	blockquote {
+// 		-webkit-margin-before: 0;
+// 		-webkit-margin-after: 0;
+// 		-webkit-margin-start: 0;
+// 		-webkit-margin-end: 0;
+// 	}
+
+// 	fieldset {
+// 		-webkit-margin-start: 0;
+// 		-webkit-margin-end: 0;
+// 		-webkit-padding-before: 0;
+// 		-webkit-padding-start: 0;
+// 		-webkit-padding-end: 0;
+// 		-webkit-padding-after: 0;
+// 	}
+
+// 	input[type=number]::-webkit-inner-spin-button, 
+// 	input[type=number]::-webkit-outer-spin-button { 
+//   	-webkit-appearance: none; 
+//   	margin: 0; 
+//   	height: auto;
+// 	}
+
+// 	input[type="search"] {
+//   	-webkit-appearance: textfield;
+//   }
+
+//   input[type="search"]::-webkit-search-cancel-button,
+// 	input[type="search"]::-webkit-search-decoration,
+// 	progress {
+//   	-webkit-appearance: none;
+// 	}
 /* end general css */
 
 /*start project related general css code*/

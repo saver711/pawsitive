@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* start general css */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;800&family=Sansita+Swashed:wght@300;500&display=swap");
 :root {
@@ -89,6 +90,7 @@ also recommended to do the following:
 3- set general line-height for p element (1.56 for example)
 4- set *{transition : all .15s ease}
 */
+/* ∞∞ IE ∞∞ */
 /* end general css */
 /*start project related general css code*/
 .transitionDelay_150 {
