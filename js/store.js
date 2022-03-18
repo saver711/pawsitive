@@ -1,5 +1,7 @@
 "use strict";
 
+/* start selects */
+
 const dropdownEls = document.querySelectorAll(".dropdown-el");
 
 dropdownEls.forEach((dropdownEl) => {
@@ -21,12 +23,25 @@ document.addEventListener("click", ({ target }) => {
   });
 });
 
+/* end selects */
 
-/* 
-const others = Array.from(dropdownEls).filter(e=>{
-        e !== dropdownEl
+/* start click on add to cart */
+const store = document.getElementById('store'),
+        addToCarts = store.querySelectorAll('.product__add');
+let cartNum = document.getElementById('cart_num');
+        
+
+addToCarts.forEach(addToCart=>{
+    const addToCartCircle = addToCart.firstElementChild;
+    addToCart.addEventListener('click', ()=>{
+        if(!addToCartCircle.classList.contains('show')){
+            addToCartCircle.classList.add('show');
+            cartNum.innerHTML++
+            console.log(cartNum.innerHTML);
+        }
+        
     })
-    others.forEach((el) => {
-      el.classList.remove("expanded");
-    });
-*/
+
+
+})
+/* end click on add to cart */

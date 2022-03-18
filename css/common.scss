@@ -87,6 +87,7 @@ also recommended to do the following:
 2- set general font size to the p, all h elements p{font-size: 'value'rem}
 3- set general line-height for p element (1.56 for example)
 4- set *{transition : all .15s ease}
+5- mixins
 */
 
 // ∞∞ browser specific ∞∞ */ i will add it to new project
@@ -270,6 +271,13 @@ also recommended to do the following:
   padding: 5px 15px;
   text-align: center;
   border: 2px solid var(--primary-color);
+  cursor: pointer;
+  position: relative;
+  top: 0;
+
+  &:active{
+    top: 1.2px;
+  }
 
   &:hover{
     box-shadow: 0 0 0 0 var(--primary-color) inset;
