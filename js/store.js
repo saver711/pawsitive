@@ -27,11 +27,11 @@ document.addEventListener("click", ({ target }) => {
 
 /* start click on add to cart */
 const store = document.getElementById('store'),
-        addToCarts = store.querySelectorAll('.product__add');
+        addToCarts = store?.querySelectorAll('.product__add');
 let cartNum = document.getElementById('cart_num');
         
 
-addToCarts.forEach(addToCart=>{
+addToCarts?.forEach(addToCart=>{
     const addToCartCircle = addToCart.firstElementChild;
     addToCart.addEventListener('click', ()=>{
         if(!addToCartCircle.classList.contains('show')){

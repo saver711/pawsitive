@@ -85,6 +85,8 @@ section {
 
 /* 
 also recommended to do the following:
+** new grid system
+** login / sign like dribble
 1- divide the site into styling similar components
 2- set general font size to the p, all h elements p{font-size: 'value'rem}
 3- set general line-height for p element (1.56 for example)

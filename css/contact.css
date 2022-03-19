@@ -19,6 +19,7 @@
   background-image: url(../assets/images/cat-dog-hero.webp);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 .viewContact .headingComponent {
   color: var(--slightly-black-color);
