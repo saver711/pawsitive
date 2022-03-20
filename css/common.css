@@ -6,7 +6,7 @@
   --inspiration-color: #008ed4;
   --slightly-black-color: #575757;
   --primary-color: #ed6436;
-  --slight-primary-color: rgba(237, 100, 54, .5);
+  --slight-primary-color: rgba(237, 100, 54, 0.5);
   --white-color: #fff;
   --very-slight-white-color: #efefef;
   --black-color: #000;
@@ -48,10 +48,14 @@ ul {
   list-style: none;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
   outline: none;
 }
-select:active, input:active, textarea:active {
+select:active,
+input:active,
+textarea:active {
   outline: none;
 }
 
@@ -91,11 +95,128 @@ also recommended to do the following:
 2- set general font size to the p, all h elements p{font-size: 'value'rem}
 3- set general line-height for p element (1.56 for example)
 4- set *{transition : all .15s ease}
-5- mixins
+5- mixins (absolute centering, flex centering, click action>>position, top, cursor combination)
 */
 /* ∞∞ IE ∞∞ */
 /* end general css */
 /*start project related general css code*/
+/* start slider */
+/* Main Wrapper Container */
+.container-slider {
+  position: relative;
+  max-width: 700px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Slider Container which contains images */
+.slides {
+  position: relative;
+}
+
+/* Default Image Properties */
+.slides__elmnt {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: none;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 500ms;
+}
+
+/* Active Image or Current image to display */
+.slides__elmnt[data-active=true] {
+  display: block;
+  transition-delay: 0ms;
+}
+
+/* Image Slider Next And Previous Buttons */
+.btn-slide {
+  position: absolute;
+  background: #f1f1f1;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  transition: opacity 300ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Show Buttons when user hover on the slider Container */
+.container-slider:hover > .btn-slide {
+  opacity: 1;
+}
+
+/* Previous and Next Button Position Absolute */
+.prev,
+.next {
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Bottom Dots Container  */
+.container-dots {
+  position: absolute;
+  bottom: -2.6rem;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Sigle Dot style */
+.dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: var(--black-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Change the color of bg when user hover on it. */
+.dot:hover {
+  opacity: 0.9;
+  background: var(--slightly-black-color);
+}
+
+/* Current or active dot */
+.dot[data-active=true] {
+  background: var(--primary-color);
+}
+
+.sliderImages {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sliderImages__img_div {
+  cursor: pointer;
+}
+.sliderImages__img_div:not([data-active=true]) {
+  opacity: 0.5;
+  transition: opacity 0.13 ease-in-out;
+}
+.sliderImages__img_div:not([data-active=true]):hover {
+  opacity: 1;
+}
+
+/* end slider */
 .transitionDelay_150 {
   transition-delay: 150ms !important;
 }
@@ -346,7 +467,9 @@ header .headingComponent {
   transition: all 1.6s cubic-bezier(0.61, -0.25, 0.1, 1.4);
   transform-origin: 50% 50%;
 }
-.moving_svg .alternate_path, .moving_svg .alternate_g, .moving_svg .alternate_image {
+.moving_svg .alternate_path,
+.moving_svg .alternate_g,
+.moving_svg .alternate_image {
   visibility: hidden;
 }
 
@@ -464,18 +587,26 @@ header .headingComponent {
   background-color: var(--white-color);
 }
 
-.whiteNav.showNav .nav__item {
+.darkBackForNav .nav__item {
+  color: var(--white-color);
+}
+.darkBackForNav .nav__nested--item {
   color: var(--slightly-black-color);
 }
-.whiteNav.showNav .nav__logo {
+.darkBackForNav .alternateNav i {
+  color: var(--white-color);
+}
+.darkBackForNav.showNav .nav__item {
+  color: var(--slightly-black-color);
+}
+.darkBackForNav.showNav .nav .nav__logo {
   display: inline-block;
-  width: 106px;
-  height: 50px;
+  height: 4.4vw;
   background-image: url(../assets/images/logo-green.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }
-.whiteNav.showNav .nav__logo img {
+.darkBackForNav.showNav .nav .nav__logo img {
   display: none;
 }
 
@@ -893,8 +1024,6 @@ header .headingComponent {
   html {
     font-size: 8px;
   }
-
-  /* responsive */
 }
 @media only screen and (max-width: 830.99px) {
   /* general */
@@ -956,15 +1085,51 @@ header .headingComponent {
 
   /* end polygon*/
   /* start boxOf2MainRight */
-  .boxOf2MainRight .box__item:first-of-type, .boxOf2MainLeft .box__item:first-of-type {
+  .boxOf2MainRight .box__item:first-of-type,
+.boxOf2MainLeft .box__item:first-of-type {
     padding-right: var(--site-padding) !important;
   }
-  .boxOf2MainRight .box__item:last-of-type, .boxOf2MainLeft .box__item:last-of-type {
+  .boxOf2MainRight .box__item:last-of-type,
+.boxOf2MainLeft .box__item:last-of-type {
     padding-left: var(--site-padding) !important;
   }
 
   /* end boxOf2MainRight */
-  /* start navs */
+  /* start nav */
+  .darkBackForNav .nav__item {
+    color: var(--slightly-black-color);
+  }
+  .darkBackForNav .nav .nav__logo {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    background-image: url(../assets/images/logo-green.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .darkBackForNav .nav .nav__logo img {
+    display: none;
+  }
+  .darkBackForNav.showNav .nav .nav__logo {
+    width: 85px;
+    height: 40px;
+  }
+  .darkBackForNav.showNav .alternateNav i {
+    color: var(--slightly-black-color);
+  }
+  .darkBackForNav.showNav .alternateNav .nav__logo {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    background-image: url(../assets/images/logo-green.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .darkBackForNav.showNav .alternateNav .nav__logo img {
+    display: none;
+  }
+
+  /* end nav */
   .nav {
     flex-direction: column;
     width: 200px;
@@ -993,23 +1158,15 @@ header .headingComponent {
     color: var(--slightly-black-color);
   }
 
-  .alternateNav {
+  nav.alternateNav {
     display: flex;
     align-items: center;
     width: 100%;
   }
-  .alternateNav i {
+  nav.alternateNav i {
     font-size: 20px;
     margin-right: 15px;
     cursor: pointer;
-  }
-
-  .showNav .alternateNav i {
-    color: var(--slightly-black-color);
-  }
-  .showNav .nav__logo {
-    width: 85px;
-    height: 40px;
   }
 
   .nav__logo {
@@ -1089,7 +1246,5 @@ header .headingComponent {
   .responseBox > div {
     width: 100%;
   }
-
-  /* general */
 }
 /* end responsive *//*# sourceMappingURL=common.css.map */

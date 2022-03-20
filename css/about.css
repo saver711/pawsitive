@@ -124,27 +124,6 @@
 /* end footer */
 /* start responsive */
 @media only screen and (max-width: 720.99px) {
-  /* start nav */
-  .nav-container .nav__logo {
-    display: inline-block;
-    width: 85px;
-    height: 40px;
-    background-image: url(../assets/images/logo-green.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .nav-container .nav__logo img {
-    display: none;
-  }
-
-  .alternateNav i {
-    color: var(--white-color);
-  }
-  .alternateNav .nav__logo {
-    background-image: url(../assets/images/logo-white.webp);
-  }
-
-  /* end nav */
   /* start invest */
   .invest__cart:first-child {
     margin-top: 0;

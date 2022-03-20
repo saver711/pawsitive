@@ -32,157 +32,153 @@
 <body>
 <!-- start header -->
 <header class="view viewStore paddB-35">
-    <div class="nav-container whiteNav">
+    <div class="nav-container darkBackForNav">
         <nav class="nav">
-            <i class="fa-solid fa-xmark nav__close"></i>
-            <a href="#" class="nav__logo">
-                <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
-            </a>
-            <div class="nav__right">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="../index.html">home</a>
+          <i class="fa-solid fa-xmark nav__close"></i>
+          <a href="../index.html" class="nav__logo">
+            <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
+          </a>
+          <div class="nav__right">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="../index.html">home</a>
+              </li>
+              <li class="nav__item">
+                <a href="about.html">about</a>
+              </li>
+              <li class="nav__item">
+                <a href="services.html">services</a>
+                <i class="fa-solid fa-angle-down nav__icon"></i>
+                <ul class="nav__nested">
+                  <div class="nav__nested--items-box">
+                    <li class="nav__nested--item">
+                      <a href="#">dropdown link 1</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="about.html">about</a>
+                    <li class="nav__nested--item">
+                      <a href="#">dropdown link 2</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="services.html">services</a>
-                        <i class="fa-solid fa-angle-down nav__icon"></i>
-                        <ul class="nav__nested">
-                            <div class="nav__nested--items-box">
-                                <li class="nav__nested--item">
-                                    <a href="#">dropdown link 1</a>
-                                </li>
-                                <li class="nav__nested--item">
-                                    <a href="#">dropdown link 2</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="nav__item active">
-                        <a href="#">store</a>
-                        <i class="fa-solid fa-angle-down nav__icon"></i>
-                        <ul class="nav__nested">
-                            <div class="nav__nested--items-box">
-                                <li class="nav__nested--item">
-                                    <a href="cart.html">cart</a>
-                                </li>
-                                <li class="nav__nested--item">
-                                    <a href="checkout.html">checkout</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html">contact</a>
-                    </li>
-
-                    <span class="nav__under">
-                        <span class="nav__under--1"></span><span class="nav__under--2"></span><span
-                            class="nav__under--3"></span><span class="nav__under--4"></span>
-                    </span>
+                  </div>
                 </ul>
-
-                <div class="nav__user">
-                    <!-- <a class="nav__person" href="account.html">
-                  <img
-                    src="../assets/images/random-person.webp"
-                    alt="user photo"
-                  />
-                </a> -->
-                    <div class="nav__log">
-                        <p>log in</p>
-                        <div class="custom-shape-divider-bottom-1646521459">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                                preserveAspectRatio="none">
-                                <path
-                                    d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-                                    class="shape-fill"></path>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="form-container nav__form-container">
-                        <ul class="formSplit">
-                            <li class="formSplit__item active" data-target="logInForm">
-                                log in
-                            </li>
-                            <li class="formSplit__item" data-target="signUpForm">
-                                sign up
-                            </li>
-                        </ul>
-                        <form action="" name="logInForm" class="form nav__form">
-                            <div class="form__content">
-                                <label for="loginEmail">E-Mail:</label>
-                                <input type="text" id="loginEmail" name="loginEmail" />
-                                <p class="form__error">Write a valid E-Mail.</p>
-                                <label for="loginPassword">Password:</label>
-                                <input type="password" class="" id="loginPassword" name="loginPassword" />
-                                <p class="form__error"></p>
-
-                                <p class="form__showPassword">
-                                    <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
-                                    <label for="loginShowPassword">show password</label>
-                                </p>
-
-                                <input type="submit" class="mainBtn" value="log in" />
-
-                                <div class="form__splitter">
-                                    <span class="form__splitter--circle">or</span>
-                                </div>
-
-                                <a href="#" class="fb form__social">
-                                    <i class="fa-brands fa-facebook-f"></i> Login with Facebook
-                                </a>
-                                <a href="#" class="twitter form__social">
-                                    <i class="fa-brands fa-twitter"></i> Login with Twitter
-                                </a>
-                            </div>
-                        </form>
-
-                        <form action="" name="signUpForm" class="form nav__form">
-                            <div class="form__content">
-                                <label for="signEmail">E-Mail:</label>
-                                <input type="text" id="signEmail" name="signEmail" />
-                                <p class="form__error">Write a valid E-Mail.</p>
-
-                                <label for="signPassword">Password:</label>
-                                <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
-                                <p class="form__error"></p>
-                                <p class="form__showPassword">
-                                    <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
-                                    <label for="signShowPassword">show password</label>
-                                </p>
-
-                                <input type="submit" class="mainBtn" value="sign up" />
-
-                                <div class="form__splitter">
-                                    <span class="form__splitter--circle">or</span>
-                                </div>
-
-                                <a href="#" class="fb form__social">
-                                    <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
-                                </a>
-                                <a href="#" class="twitter form__social">
-                                    <i class="fa-brands fa-twitter"></i> sign up with Twitter
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+              </li>
+              <li class="nav__item active">
+                <a href="#">store</a>
+                <i class="fa-solid fa-angle-down nav__icon"></i>
+                <ul class="nav__nested">
+                  <div class="nav__nested--items-box">
+                    <li class="nav__nested--item">
+                      <a href="cart.html">cart</a>
+                    </li>
+                    <li class="nav__nested--item">
+                      <a href="dropdown item.html">dropdown item</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="contact.html">contact</a>
+              </li>
+  
+              <span class="nav__under">
+                <span class="nav__under--1"></span><span class="nav__under--2"></span><span
+                  class="nav__under--3"></span><span class="nav__under--4"></span>
+              </span>
+            </ul>
+  
+            <div class="nav__user">
+              <a class="nav__person" href="account.html">
+                <img src="../assets/images/random-person.webp" alt="user photo" />
+              </a>
+  
+              <!-- <div class="nav__log">
+                <p>log in</p>
+                <div class="custom-shape-divider-bottom-1646521459">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
+                      class="shape-fill"></path>
+                  </svg>
                 </div>
+              </div> -->
+  
+              <div class="form-container nav__form-container">
+                <ul class="formSplit">
+                  <li class="formSplit__item active" data-target="logInForm">
+                    log in
+                  </li>
+                  <li class="formSplit__item" data-target="signUpForm">
+                    sign up
+                  </li>
+                </ul>
+                <form action="" name="logInForm" class="form nav__form">
+                  <div class="form__content">
+                    <label for="loginEmail">E-Mail:</label>
+                    <input type="text" id="loginEmail" name="loginEmail" />
+                    <p class="form__error">Write a valid E-Mail.</p>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" class="" id="loginPassword" name="loginPassword" />
+                    <p class="form__error"></p>
+  
+                    <p class="form__showPassword">
+                      <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
+                      <label for="loginShowPassword">show password</label>
+                    </p>
+  
+                    <input type="submit" class="mainBtn" value="log in" />
+  
+                    <div class="form__splitter">
+                      <span class="form__splitter--circle">or</span>
+                    </div>
+  
+                    <a href="#" class="fb form__social">
+                      <i class="fa-brands fa-facebook-f"></i> Login with Facebook
+                    </a>
+                    <a href="#" class="twitter form__social">
+                      <i class="fa-brands fa-twitter"></i> Login with Twitter
+                    </a>
+                  </div>
+                </form>
+  
+                <form action="" name="signUpForm" class="form nav__form">
+                  <div class="form__content">
+                    <label for="signEmail">E-Mail:</label>
+                    <input type="text" id="signEmail" name="signEmail" />
+                    <p class="form__error">Write a valid E-Mail.</p>
+  
+                    <label for="signPassword">Password:</label>
+                    <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
+                    <p class="form__error"></p>
+                    <p class="form__showPassword">
+                      <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
+                      <label for="signShowPassword">show password</label>
+                    </p>
+  
+                    <input type="submit" class="mainBtn" value="sign up" />
+  
+                    <div class="form__splitter">
+                      <span class="form__splitter--circle">or</span>
+                    </div>
+  
+                    <a href="#" class="fb form__social">
+                      <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
+                    </a>
+                    <a href="#" class="twitter form__social">
+                      <i class="fa-brands fa-twitter"></i> sign up with Twitter
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
+  
+          </div>
         </nav>
-
+  
         <nav class="alternateNav">
-            <i class="fa-solid fa-bars"></i>
-            <a href="#" class="nav__logo">
-                <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
-            </a>
+          <i class="fa-solid fa-bars"></i>
+          <a href="#" class="nav__logo">
+            <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
+          </a>
         </nav>
-
-
-    </div>
+      </div>
 
     <div class="main-container">
         <div class="viewStore__text headingComponent">
@@ -294,67 +290,73 @@
 
                 <div class="box__left--25">
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_1-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">food</h4>
-                            <h2 class="product__title">Air Dried Lamb</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span data-percentage="50"></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_1-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$40.00</p>
-
-                            <span class="mainBtn product__btn product__add">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">food</h4>
+                                <h2 class="product__title">Air Dried Lamb</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span data-percentage="50"></span>
+                                </div>
+                                <p class="product__price">$40.00</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
                     </div>
                 </div>
                 <div class="box__middle1--25">
 
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_2-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">fish</h4>
-                            <h2 class="product__title">dry chicken food</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_2-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$25.00 – $40.00</p>
-
-                            <a href="product.html" class="mainBtn product__btn">see options
-                            </a>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">fish</h4>
+                                <h2 class="product__title">dry chicken food</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span></span>
+                                </div>
+                                <p class="product__price">$25.00 – $40.00</p>
+    
+                            </div>
+                        </a>
+                        <a href="product.html" class="mainBtn product__btn">see options
+                        </a>
                     </div>
 
                 </div>
                 <div class="box__middle2--25">
 
                     <div class="product productSale">
-                        <div class="product__img">
-                            <img src="../assets/images/product_3-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">rewards</h4>
-                            <h2 class="product__title">Dry Lamb reward</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_3-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price "> <span class="productSale__old">$12.99</span>$9.99</p>
-
-                            <span class="mainBtn product__btn product__add">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">rewards</h4>
+                                <h2 class="product__title">Dry Lamb reward</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span></span>
+                                </div>
+                                <p class="product__price "> <span class="productSale__old">$12.99</span>$9.99</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
 
                         <span class="productSale__circle">sale!</span>
                     </div>
@@ -386,90 +388,98 @@
                 <div class="box__left--25">
 
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_5-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">fish</h4>
-                            <h2 class="product__title">dry chicken food</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_5-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$9.99</p>
-
-                            <span class="mainBtn product__btn">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">food</h4>
+                                <h2 class="product__title">Air Dried Lamb</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span data-percentage="50"></span>
+                                </div>
+                                <p class="product__price">$40.00</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
                     </div>
                 </div>
                 <div class="box__middle1--25">
 
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_6-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">fish</h4>
-                            <h2 class="product__title">dry chicken food</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_6-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$9.99</p>
-
-                            <span class="mainBtn product__btn">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">food</h4>
+                                <h2 class="product__title">Air Dried Lamb</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span data-percentage="50"></span>
+                                </div>
+                                <p class="product__price">$40.00</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
                     </div>
 
                 </div>
                 <div class="box__middle2--25">
 
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_7-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">fish</h4>
-                            <h2 class="product__title">dry chicken food</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_7-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$9.99</p>
-
-                            <span class="mainBtn product__btn">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">food</h4>
+                                <h2 class="product__title">Air Dried Lamb</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span data-percentage="50"></span>
+                                </div>
+                                <p class="product__price">$40.00</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
                     </div>
 
                 </div>
                 <div class="box__right--25">
                     <div class="product">
-                        <div class="product__img">
-                            <img src="../assets/images/product_8-300x300.webp" alt="product image">
-                        </div>
-
-                        <div class="product__body">
-                            <h4 class="product__categ">fish</h4>
-                            <h2 class="product__title">dry chicken food</h2>
-                            <div class="product__stars">
-                                <img src="../assets/images/stars.png" alt="stars">
-                                <span></span>
+                        <a href="product.html">
+                            <div class="product__img">
+                                <img src="../assets/images/product_8-300x300.webp" alt="product image">
                             </div>
-                            <p class="product__price">$9.99</p>
-
-                            <span class="mainBtn product__btn">add to cart
-                                <span><i class="fa-solid fa-check"></i></span>
-                            </span>
-                        </div>
+    
+                            <div class="product__body">
+                                <h4 class="product__categ">food</h4>
+                                <h2 class="product__title">Air Dried Lamb</h2>
+                                <div class="product__stars">
+                                    <img src="../assets/images/stars.png" alt="stars">
+                                    <span data-percentage="50"></span>
+                                </div>
+                                <p class="product__price">$40.00</p>
+    
+                            </div>
+                        </a>
+                        <span class="mainBtn product__btn product__add">add to cart
+                            <span><i class="fa-solid fa-check"></i></span>
+                        </span>
                     </div>
                 </div>
 

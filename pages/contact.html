@@ -33,155 +33,151 @@
     <header class="view  viewContact paddB-35">
         <div class="nav-container">
             <nav class="nav">
-                <i class="fa-solid fa-xmark nav__close"></i>
-                <a href="#" class="nav__logo">
-                    <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
-                </a>
-                <div class="nav__right">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="../index.html">home</a>
+              <i class="fa-solid fa-xmark nav__close"></i>
+              <a href="../index.html" class="nav__logo">
+                <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
+              </a>
+              <div class="nav__right">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="../index.html">home</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="about.html">about</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="services.html">services</a>
+                    <i class="fa-solid fa-angle-down nav__icon"></i>
+                    <ul class="nav__nested">
+                      <div class="nav__nested--items-box">
+                        <li class="nav__nested--item">
+                          <a href="#">dropdown link 1</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="about.html">about</a>
+                        <li class="nav__nested--item">
+                          <a href="#">dropdown link 2</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="services.html">services</a>
-                            <i class="fa-solid fa-angle-down nav__icon"></i>
-                            <ul class="nav__nested">
-                                <div class="nav__nested--items-box">
-                                    <li class="nav__nested--item">
-                                        <a href="#">dropdown link 1</a>
-                                    </li>
-                                    <li class="nav__nested--item">
-                                        <a href="#">dropdown link 2</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="store.html">store</a>
-                            <i class="fa-solid fa-angle-down nav__icon"></i>
-                            <ul class="nav__nested">
-                                <div class="nav__nested--items-box">
-                                    <li class="nav__nested--item">
-                                        <a href="cart.html">cart</a>
-                                    </li>
-                                    <li class="nav__nested--item">
-                                        <a href="checkout.html">checkout</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </li>
-                        <li class="nav__item active">
-                            <a href="#">contact</a>
-                        </li>
-
-                        <span class="nav__under">
-                            <span class="nav__under--1"></span><span class="nav__under--2"></span><span
-                                class="nav__under--3"></span><span class="nav__under--4"></span>
-                        </span>
+                      </div>
                     </ul>
-
-                    <div class="nav__user">
-                        <!-- <a class="nav__person" href="account.html">
-                  <img
-                    src="../assets/images/random-person.webp"
-                    alt="user photo"
-                  />
-                </a> -->
-                        <div class="nav__log">
-                            <p>log in</p>
-                            <div class="custom-shape-divider-bottom-1646521459">
-                                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                                    preserveAspectRatio="none">
-                                    <path
-                                        d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-                                        class="shape-fill"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class="form-container nav__form-container">
-                            <ul class="formSplit">
-                                <li class="formSplit__item active" data-target="logInForm">
-                                    log in
-                                </li>
-                                <li class="formSplit__item" data-target="signUpForm">
-                                    sign up
-                                </li>
-                            </ul>
-                            <form action="" name="logInForm" class="form nav__form">
-                                <div class="form__content">
-                                    <label for="loginEmail">E-Mail:</label>
-                                    <input type="text" id="loginEmail" name="loginEmail" />
-                                    <p class="form__error">Write a valid E-Mail.</p>
-                                    <label for="loginPassword">Password:</label>
-                                    <input type="password" class="" id="loginPassword" name="loginPassword" />
-                                    <p class="form__error"></p>
-
-                                    <p class="form__showPassword">
-                                        <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
-                                        <label for="loginShowPassword">show password</label>
-                                    </p>
-
-                                    <input type="submit" class="mainBtn" value="log in" />
-
-                                    <div class="form__splitter">
-                                        <span class="form__splitter--circle">or</span>
-                                    </div>
-
-                                    <a href="#" class="fb form__social">
-                                        <i class="fa-brands fa-facebook-f"></i> Login with Facebook
-                                    </a>
-                                    <a href="#" class="twitter form__social">
-                                        <i class="fa-brands fa-twitter"></i> Login with Twitter
-                                    </a>
-                                </div>
-                            </form>
-
-                            <form action="" name="signUpForm" class="form nav__form">
-                                <div class="form__content">
-                                    <label for="signEmail">E-Mail:</label>
-                                    <input type="text" id="signEmail" name="signEmail" />
-                                    <p class="form__error">Write a valid E-Mail.</p>
-
-                                    <label for="signPassword">Password:</label>
-                                    <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
-                                    <p class="form__error"></p>
-                                    <p class="form__showPassword">
-                                        <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
-                                        <label for="signShowPassword">show password</label>
-                                    </p>
-
-                                    <input type="submit" class="mainBtn" value="sign up" />
-
-                                    <div class="form__splitter">
-                                        <span class="form__splitter--circle">or</span>
-                                    </div>
-
-                                    <a href="#" class="fb form__social">
-                                        <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
-                                    </a>
-                                    <a href="#" class="twitter form__social">
-                                        <i class="fa-brands fa-twitter"></i> sign up with Twitter
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
+                  </li>
+                  <li class="nav__item">
+                    <a href="store.html">store</a>
+                    <i class="fa-solid fa-angle-down nav__icon"></i>
+                    <ul class="nav__nested">
+                      <div class="nav__nested--items-box">
+                        <li class="nav__nested--item">
+                          <a href="cart.html">cart</a>
+                        </li>
+                        <li class="nav__nested--item">
+                          <a href="dropdown item.html">dropdown item</a>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                  <li class="nav__item active">
+                    <a href="#">contact</a>
+                  </li>
+      
+                  <span class="nav__under">
+                    <span class="nav__under--1"></span><span class="nav__under--2"></span><span
+                      class="nav__under--3"></span><span class="nav__under--4"></span>
+                  </span>
+                </ul>
+      
+                <div class="nav__user">
+                  <a class="nav__person" href="account.html">
+                    <img src="../assets/images/random-person.webp" alt="user photo" />
+                  </a>
+      
+                  <!-- <div class="nav__log">
+                    <p>log in</p>
+                    <div class="custom-shape-divider-bottom-1646521459">
+                      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                        preserveAspectRatio="none">
+                        <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
+                          class="shape-fill"></path>
+                      </svg>
                     </div>
+                  </div> -->
+      
+                  <div class="form-container nav__form-container">
+                    <ul class="formSplit">
+                      <li class="formSplit__item active" data-target="logInForm">
+                        log in
+                      </li>
+                      <li class="formSplit__item" data-target="signUpForm">
+                        sign up
+                      </li>
+                    </ul>
+                    <form action="" name="logInForm" class="form nav__form">
+                      <div class="form__content">
+                        <label for="loginEmail">E-Mail:</label>
+                        <input type="text" id="loginEmail" name="loginEmail" />
+                        <p class="form__error">Write a valid E-Mail.</p>
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" class="" id="loginPassword" name="loginPassword" />
+                        <p class="form__error"></p>
+      
+                        <p class="form__showPassword">
+                          <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
+                          <label for="loginShowPassword">show password</label>
+                        </p>
+      
+                        <input type="submit" class="mainBtn" value="log in" />
+      
+                        <div class="form__splitter">
+                          <span class="form__splitter--circle">or</span>
+                        </div>
+      
+                        <a href="#" class="fb form__social">
+                          <i class="fa-brands fa-facebook-f"></i> Login with Facebook
+                        </a>
+                        <a href="#" class="twitter form__social">
+                          <i class="fa-brands fa-twitter"></i> Login with Twitter
+                        </a>
+                      </div>
+                    </form>
+      
+                    <form action="" name="signUpForm" class="form nav__form">
+                      <div class="form__content">
+                        <label for="signEmail">E-Mail:</label>
+                        <input type="text" id="signEmail" name="signEmail" />
+                        <p class="form__error">Write a valid E-Mail.</p>
+      
+                        <label for="signPassword">Password:</label>
+                        <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
+                        <p class="form__error"></p>
+                        <p class="form__showPassword">
+                          <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
+                          <label for="signShowPassword">show password</label>
+                        </p>
+      
+                        <input type="submit" class="mainBtn" value="sign up" />
+      
+                        <div class="form__splitter">
+                          <span class="form__splitter--circle">or</span>
+                        </div>
+      
+                        <a href="#" class="fb form__social">
+                          <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
+                        </a>
+                        <a href="#" class="twitter form__social">
+                          <i class="fa-brands fa-twitter"></i> sign up with Twitter
+                        </a>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+      
+              </div>
             </nav>
-
+      
             <nav class="alternateNav">
-                <i class="fa-solid fa-bars"></i>
-                <a href="#" class="nav__logo">
-                    <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
-                </a>
+              <i class="fa-solid fa-bars"></i>
+              <a href="../index.html" class="nav__logo">
+                <img src="../assets/images/logo-green.webp" alt="pawsitive logo" />
+              </a>
             </nav>
-
-            
-        </div>
+          </div>
 
         <div class="main-container">
             <div class=" viewContact__text headingComponent">
@@ -262,7 +258,7 @@
                           <input required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" title="No Numbers Just Letters" name="name" type="text" placeholder="Name">
                           <input required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" title="No Numbers Just Letters" name="lastname" type="text" placeholder="Lastname">
                           <input required pattern="^([a-zA-Z])([\w\d\._-]+)?@[a-z\d-]+\.[a-z]{2,}(\.[a-z]{2,})?$" title="eg: ahwork711@gmail.com" name="email" type="email" placeholder="E-mail">
-                          <input required pattern="/^+201\d{9}$/" title="eg: +201126183678" name="tel" type="tel" placeholder="Phone number">
+                          <input required pattern="^01\d{9}$" title="eg: 01126183678" name="tel" type="tel" placeholder="Phone number">
                           <input required title="we need date to serve you in" name="timedate" type="datetime-local" placeholder="Choose a date">
                           <select name="service">
                               <option value="1">dog boarding</option>

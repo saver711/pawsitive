@@ -32,157 +32,153 @@
 <body>
 <!-- start header -->
 <header class="view viewStore paddB-35">
-    <div class="nav-container whiteNav">
+    <div class="nav-container darkBackForNav">
         <nav class="nav">
-            <i class="fa-solid fa-xmark nav__close"></i>
-            <a href="#" class="nav__logo">
-                <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
-            </a>
-            <div class="nav__right">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="../index.html">home</a>
+          <i class="fa-solid fa-xmark nav__close"></i>
+          <a href="../index.html" class="nav__logo">
+            <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
+          </a>
+          <div class="nav__right">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="../index.html">home</a>
+              </li>
+              <li class="nav__item">
+                <a href="about.html">about</a>
+              </li>
+              <li class="nav__item">
+                <a href="services.html">services</a>
+                <i class="fa-solid fa-angle-down nav__icon"></i>
+                <ul class="nav__nested">
+                  <div class="nav__nested--items-box">
+                    <li class="nav__nested--item">
+                      <a href="#">dropdown link 1</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="about.html">about</a>
+                    <li class="nav__nested--item">
+                      <a href="#">dropdown link 2</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="services.html">services</a>
-                        <i class="fa-solid fa-angle-down nav__icon"></i>
-                        <ul class="nav__nested">
-                            <div class="nav__nested--items-box">
-                                <li class="nav__nested--item">
-                                    <a href="#">dropdown link 1</a>
-                                </li>
-                                <li class="nav__nested--item">
-                                    <a href="#">dropdown link 2</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="nav__item active">
-                        <a href="#">store</a>
-                        <i class="fa-solid fa-angle-down nav__icon"></i>
-                        <ul class="nav__nested">
-                            <div class="nav__nested--items-box">
-                                <li class="nav__nested--item">
-                                    <a href="cart.html">cart</a>
-                                </li>
-                                <li class="nav__nested--item">
-                                    <a href="checkout.html">checkout</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html">contact</a>
-                    </li>
-
-                    <span class="nav__under">
-                        <span class="nav__under--1"></span><span class="nav__under--2"></span><span
-                            class="nav__under--3"></span><span class="nav__under--4"></span>
-                    </span>
+                  </div>
                 </ul>
-
-                <div class="nav__user">
-                    <!-- <a class="nav__person" href="account.html">
-                  <img
-                    src="../assets/images/random-person.webp"
-                    alt="user photo"
-                  />
-                </a> -->
-                    <div class="nav__log">
-                        <p>log in</p>
-                        <div class="custom-shape-divider-bottom-1646521459">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                                preserveAspectRatio="none">
-                                <path
-                                    d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-                                    class="shape-fill"></path>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="form-container nav__form-container">
-                        <ul class="formSplit">
-                            <li class="formSplit__item active" data-target="logInForm">
-                                log in
-                            </li>
-                            <li class="formSplit__item" data-target="signUpForm">
-                                sign up
-                            </li>
-                        </ul>
-                        <form action="" name="logInForm" class="form nav__form">
-                            <div class="form__content">
-                                <label for="loginEmail">E-Mail:</label>
-                                <input type="text" id="loginEmail" name="loginEmail" />
-                                <p class="form__error">Write a valid E-Mail.</p>
-                                <label for="loginPassword">Password:</label>
-                                <input type="password" class="" id="loginPassword" name="loginPassword" />
-                                <p class="form__error"></p>
-
-                                <p class="form__showPassword">
-                                    <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
-                                    <label for="loginShowPassword">show password</label>
-                                </p>
-
-                                <input type="submit" class="mainBtn" value="log in" />
-
-                                <div class="form__splitter">
-                                    <span class="form__splitter--circle">or</span>
-                                </div>
-
-                                <a href="#" class="fb form__social">
-                                    <i class="fa-brands fa-facebook-f"></i> Login with Facebook
-                                </a>
-                                <a href="#" class="twitter form__social">
-                                    <i class="fa-brands fa-twitter"></i> Login with Twitter
-                                </a>
-                            </div>
-                        </form>
-
-                        <form action="" name="signUpForm" class="form nav__form">
-                            <div class="form__content">
-                                <label for="signEmail">E-Mail:</label>
-                                <input type="text" id="signEmail" name="signEmail" />
-                                <p class="form__error">Write a valid E-Mail.</p>
-
-                                <label for="signPassword">Password:</label>
-                                <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
-                                <p class="form__error"></p>
-                                <p class="form__showPassword">
-                                    <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
-                                    <label for="signShowPassword">show password</label>
-                                </p>
-
-                                <input type="submit" class="mainBtn" value="sign up" />
-
-                                <div class="form__splitter">
-                                    <span class="form__splitter--circle">or</span>
-                                </div>
-
-                                <a href="#" class="fb form__social">
-                                    <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
-                                </a>
-                                <a href="#" class="twitter form__social">
-                                    <i class="fa-brands fa-twitter"></i> sign up with Twitter
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+              </li>
+              <li class="nav__item active">
+                <a href="store.html">store</a>
+                <i class="fa-solid fa-angle-down nav__icon"></i>
+                <ul class="nav__nested">
+                  <div class="nav__nested--items-box">
+                    <li class="nav__nested--item">
+                      <a href="#">cart</a>
+                    </li>
+                    <li class="nav__nested--item">
+                      <a href="dropdown item.html">dropdown item</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="contact.html">contact</a>
+              </li>
+  
+              <span class="nav__under">
+                <span class="nav__under--1"></span><span class="nav__under--2"></span><span
+                  class="nav__under--3"></span><span class="nav__under--4"></span>
+              </span>
+            </ul>
+  
+            <div class="nav__user">
+              <a class="nav__person" href="account.html">
+                <img src="../assets/images/random-person.webp" alt="user photo" />
+              </a>
+  
+              <!-- <div class="nav__log">
+                <p>log in</p>
+                <div class="custom-shape-divider-bottom-1646521459">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
+                      class="shape-fill"></path>
+                  </svg>
                 </div>
+              </div> -->
+  
+              <div class="form-container nav__form-container">
+                <ul class="formSplit">
+                  <li class="formSplit__item active" data-target="logInForm">
+                    log in
+                  </li>
+                  <li class="formSplit__item" data-target="signUpForm">
+                    sign up
+                  </li>
+                </ul>
+                <form action="" name="logInForm" class="form nav__form">
+                  <div class="form__content">
+                    <label for="loginEmail">E-Mail:</label>
+                    <input type="text" id="loginEmail" name="loginEmail" />
+                    <p class="form__error">Write a valid E-Mail.</p>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" class="" id="loginPassword" name="loginPassword" />
+                    <p class="form__error"></p>
+  
+                    <p class="form__showPassword">
+                      <input class="form__showPasswordInput" type="checkbox" id="loginShowPassword" />
+                      <label for="loginShowPassword">show password</label>
+                    </p>
+  
+                    <input type="submit" class="mainBtn" value="log in" />
+  
+                    <div class="form__splitter">
+                      <span class="form__splitter--circle">or</span>
+                    </div>
+  
+                    <a href="#" class="fb form__social">
+                      <i class="fa-brands fa-facebook-f"></i> Login with Facebook
+                    </a>
+                    <a href="#" class="twitter form__social">
+                      <i class="fa-brands fa-twitter"></i> Login with Twitter
+                    </a>
+                  </div>
+                </form>
+  
+                <form action="" name="signUpForm" class="form nav__form">
+                  <div class="form__content">
+                    <label for="signEmail">E-Mail:</label>
+                    <input type="text" id="signEmail" name="signEmail" />
+                    <p class="form__error">Write a valid E-Mail.</p>
+  
+                    <label for="signPassword">Password:</label>
+                    <input type="password" class="mrB-0" id="signPassword" name="signPassword" />
+                    <p class="form__error"></p>
+                    <p class="form__showPassword">
+                      <input type="checkbox" class="form__showPasswordInput" id="signShowPassword" />
+                      <label for="signShowPassword">show password</label>
+                    </p>
+  
+                    <input type="submit" class="mainBtn" value="sign up" />
+  
+                    <div class="form__splitter">
+                      <span class="form__splitter--circle">or</span>
+                    </div>
+  
+                    <a href="#" class="fb form__social">
+                      <i class="fa-brands fa-facebook-f"></i> sign up with Facebook
+                    </a>
+                    <a href="#" class="twitter form__social">
+                      <i class="fa-brands fa-twitter"></i> sign up with Twitter
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
+  
+          </div>
         </nav>
-
+  
         <nav class="alternateNav">
-            <i class="fa-solid fa-bars"></i>
-            <a href="#" class="nav__logo">
-                <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
-            </a>
+          <i class="fa-solid fa-bars"></i>
+          <a href="#" class="nav__logo">
+            <img src="../assets/images/logo-white.webp" alt="pawsitive logo" />
+          </a>
         </nav>
-
-
-    </div>
+      </div>
 
     <div class="main-container">
         <div class="viewStore__text headingComponent">
@@ -195,23 +191,111 @@
 <!-- end header -->
 
 <!-- start cart -->
-<section class="cart" id="cart">
+<section class="cart paddTB-35" id="cart">
+    <div class="main-container">
+        <main class="cart__main">
+            <div class="slice">
+                <div class="slice__item">
+                    <a href="product.html">
+                      <img src="../assets/images/product_1-300x300.webp" alt="product">
+                    </a>
+                    <div class="slice__txt"><a href="product.html"><h2 class="slice__title">air dried salmon</h2></a>
+                    <h4 class="slice__categ">Food</h4></div>
+                </div>
     
+                <p class="slice__price">$<span class="slice__price--num">19.99</span></p>
+    
+                <div class="counter">
+                    <span class="counter__up"><i class="fa-solid fa-angle-up"></i></span>
+    
+                    <p class="counter__num">1</p>
+    
+                    <span class="counter__down"><i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+    
+                <span class="slice__remove"><i class="fa-solid fa-x"></i></span>
+            </div>
+    
+            <div class="slice">
+                <div class="slice__item">
+                  <a href="product.html">
+                    <img src="../assets/images/product_2-300x300.webp" alt="product">
+                  </a>
+                  <div class="slice__txt"><a href="product.html"><h2 class="slice__title">fried salmon</h2></a>
+                  <h4 class="slice__categ">rewards</h4></div>
+                </div>
+    
+                <p class="slice__price">$<span class="slice__price--num">22.99</span></p>
+    
+                <div class="counter">
+                  <span class="counter__up"><i class="fa-solid fa-angle-up"></i></span>
+    
+                    <p class="counter__num">1</p>
+    
+                    <span class="counter__down"><i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+    
+                <span class="slice__remove"><i class="fa-solid fa-x"></i></span>
+            </div>
+    
+            <div class="slice">
+                <div class="slice__item">
+                  <a href="product.html">
+                    <img src="../assets/images/product_3-300x300.webp" alt="product">
+                  </a>
+                  <div class="slice__txt"><a href="product.html"><h2 class="slice__title">air dried salmon</h2></a>
+                  <h4 class="slice__categ">Food</h4></div>
+                </div>
+    
+                <p class="slice__price">$<span class="slice__price--num">12.99</span></p>
+    
+                <div class="counter">
+                  <span class="counter__up"><i class="fa-solid fa-angle-up"></i></span>
+    
+                    <p class="counter__num">1</p>
+    
+                    <span class="counter__down"><i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+    
+                <span class="slice__remove"><i class="fa-solid fa-x"></i></span>
+            </div>
+        </main>
+    
+        <aside class="cart__side">
+            <div class="side">
+                <p class="side__total">total price: $<span id="totalPrice"></span></p>
+    
+                <div class="payment">
+                    <h2 class="side__title">payment method</h2>
+    
+                    <div class="payment__slice">
+                        <input class="payment__inp" checked type="radio" name="pay" id="credit">
+                        <label for="credit">my credit / debit card</label>
+                    </div>
+                    <div class="payment__slice">
+                        <input class="payment__inp" type="radio" name="pay" id="cash" data-cost="15">
+                        <label for="cash">cash on delivery: $15</label>
+                    </div>
+                </div>
+    
+                <div class="shipping">
+                    <h2 class="side__title">shipping info</h2>
+    
+                    <form action="">
+                        <label for="address">Address:</label>
+                        <input required type="text" value="Gharbia, Al Mahala Al Kobra, Khawrg Al Mahala" id="address">
+    
+                        <label for="phone">Phone:</label>
+                        <input required pattern="^01\d{9}$" title="eg: 01126183678" type="tel" value="01126183678" id="phone">
+    
+                        <input type="submit" value="dropdown item" class="shipping__submit mainBtn">
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
 </section>
 <!-- end cart -->
-
-<!-- start cats -->
-
-<!-- end cats -->
-
-<!-- start addon -->
-
-<!-- start addon -->
-
-<!-- start dogs -->
-
-<!-- end dogs -->
-
 
 <!-- start footer -->
 <footer class="footer paddTB-35">

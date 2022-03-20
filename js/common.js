@@ -195,56 +195,6 @@ function commonJs () {
     });
   });
 
-  // start form oop authentication
-  // let checkValid = false;
-  // class Auth{
-  //   constructor(form){
-  //     this.form = form
-  //   }
-
-  //   dealWithRequired(){
-  //     const allRequired = this.form.querySelectorAll('.required');
-
-  //     for(let i = 0; i < allRequired.length; i++){
-  //       const field = allRequired[i],
-  //             getFieldRegx = field.dataset.regex,
-  //             fieldValue = field.value
-
-  //       if(getFieldRegx) {
-  //         const fieldRegx = new RegExp(getFieldRegx)
-  //         if(fieldRegx.test(fieldValue)){
-  //           console.log('ok');
-  //           // checkValid = true
-  //         } else{
-  //           console.log(field);
-  //         }
-  //       }
-        
-  //     }
-  //   }
-
-  //   handleAll(){
-  //     this.dealWithRequired()
-  //   }
-  // }
-
-
-  // let myForms = document.querySelectorAll('.myForm')
-
-  // myForms.forEach(myForm=>{
-  //   myForm.addEventListener('click', (e)=>{
-  //     const fromAuthObj = new Auth(myForm);
-  //     fromAuthObj.handleAll();
-  //     // if (checkValid){
-  //     //   myForm.submit();
-  //     // } else{
-  //     //   e.preventDefault();
-  //     // }
-      
-  //   })
-  // })
-
-    // end form oop authentication
 
   
 
@@ -526,11 +476,260 @@ function commonJs () {
     //start side nav
 
     // end side nav
-    //
-    //
-    //
-    //
   });
+
+  // start slider oop
+  class Slides {
+    constructor(container) {
+      this.container = container;
+      this.slides__elemntsArr = [];
+      this.slideIndex = 1;
+      (this.touchstartX = 0),
+        (this.touchendX = 0),
+        (this.dragStart = 0),
+        (this.dragEnd = 0),
+        (this.wheelStart = 0);
+      this.sliderAutoplay = setInterval(this.nextSlide, 2000);
+      this.scrollTop = 0;
+      this.scrollLeft = 0;
+    }
+
+    
+
+    letSlidesInArr() {
+      const slides__elmnts = this.container.querySelectorAll(".slides__elmnt");
+      slides__elmnts.forEach((slides__elmnt) => {
+        this.slides__elemntsArr.push(slides__elmnt);
+      });
+    }
+
+    createDots() {
+      const dotsContainer = this.container.querySelector(".container-dots");
+      this.slides__elemntsArr.map((slides__elmnt) => {
+        let dot = document.createElement("div");
+        dot.classList.add("dot");
+        dotsContainer.appendChild(dot);
+      });
+
+      dotsContainer.firstElementChild.dataset.active = "true";
+    }
+
+    createImages(){
+      const imagesContainer = this.container.querySelector(".sliderImages");
+      this.slides__elemntsArr.map((slides__elmnt) => {
+        const sliderImages__img_div = document.createElement("div"),
+        sliderImages__img = document.createElement("img")
+        sliderImages__img_div.classList.add("sliderImages__img_div");
+        imagesContainer.appendChild(sliderImages__img_div);
+
+        
+        sliderImages__img.setAttribute('src', slides__elmnt.firstElementChild.firstElementChild.getAttribute('src'))
+
+        sliderImages__img_div.appendChild(sliderImages__img);
+
+        const sliderImages__img_div_width = `${90 * this.container.offsetWidth / 100 / this.slides__elemntsArr.length}px`
+        console.log(this.container.offsetWidth);
+        sliderImages__img_div.style.width = sliderImages__img_div_width
+
+        
+         
+      });
+      imagesContainer.firstElementChild.dataset.active = "true";
+    }
+
+    updateImageAndDot() {
+      /* ...........Updating.............. */
+      const slides = this.container.querySelector(".slides");
+      const activeSlide = slides.querySelector("[data-active]");
+
+      slides.children[this.slideIndex - 1].dataset.active = true;
+      activeSlide && delete activeSlide.dataset.active;
+
+      /* ...........Updating Dots.............. */
+      const containerDots = this.container.querySelector(".container-dots");
+      if(containerDots) {
+        const activeDot = containerDots.querySelector("[data-active]");
+        containerDots.children[this.slideIndex - 1].dataset.active = true;
+      activeDot && delete activeDot.dataset.active;
+      }
+
+      /* ...........Updating underImages.............. */
+      const imagesContainer = this.container.querySelector(".sliderImages");
+      if(imagesContainer) {
+        const activeImg = imagesContainer.querySelector("[data-active]");
+        imagesContainer.children[this.slideIndex - 1].dataset.active = true;
+      activeImg && delete activeImg.dataset.active;
+      }
+      
+      
+    }
+
+    moveDot(index) {
+      this.slideIndex = index;
+      this.updateImageAndDot();
+    }
+
+    triggerMoveDotWhenClickOnDot() {
+      const dots = this.container
+        .querySelector(".container-dots")
+        .querySelectorAll("*")
+        .forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            this.moveDot(index + 1);
+          });
+        });
+    }
+
+    triggerMoveImgWhenClickOnImg() {
+      const images = this.container.querySelector(".sliderImages")
+        .querySelectorAll(".sliderImages__img_div")
+        .forEach((image, index) => {
+          image.addEventListener("click", () => {
+            this.moveDot(index + 1);
+          });
+        });
+    }
+
+    nextSlide = () => {
+      if (this.slideIndex !== this.slides__elemntsArr.length) {
+        ++this.slideIndex;
+      } else if (this.slideIndex === this.slides__elemntsArr.length) {
+        this.slideIndex = 1;
+      }
+      this.updateImageAndDot();
+    };
+
+    // Slide Previous Button Click Event
+    prevSlide = () => {
+      if (this.slideIndex !== 1) {
+        --this.slideIndex;
+      } else if (this.slideIndex === 1) {
+        this.slideIndex = this.slides__elemntsArr.length;
+      }
+      this.updateImageAndDot();
+    };
+
+    triggerNextOrPrevFunOnNextOrPrevIsClicked() {
+      const nextBtn = this.container.querySelector(".next");
+      nextBtn.addEventListener("click", this.nextSlide);
+      const prevBtn = this.container.querySelector(".prev");
+      prevBtn.addEventListener("click", this.prevSlide);
+    }
+
+    //start mousewheel
+
+    handleMouseWheel() {
+      this.container.addEventListener("wheel", (e) => {
+        this.wheelStart = e.deltaY;
+        this.handleGesture();
+        this.wheelStart = 0;
+      }, {passive: true});
+    }
+
+    // end mousewheel
+
+    disableScroll() {
+      // Get the current page scroll position
+      this.scrollTop = window.scrollY || document.documentElement.scrollTop;
+      (this.scrollLeft =
+        window.scrollX || document.documentElement.scrollLeft),
+        // if any scroll is attempted,
+        // set this to the previous value
+        (window.onscroll = (e) => {
+          // e.preventDefault();
+          window.scrollTo(this.scrollLeft, this.scrollTop);
+        });
+      document.body.classList.add("stop-scrolling");
+    }
+
+    enableScroll() {
+      document.body.classList.remove("stop-scrolling");
+      window.onscroll = function () {};
+    }
+
+    // //sliderAutoplay
+    sliderAutoPlay() {
+      this.container.addEventListener("mouseenter", () => {
+        clearInterval(this.sliderAutoplay);
+        this.disableScroll();
+      });
+      this.container.addEventListener("mouseleave", () => {
+        this.enableScroll();
+        this.sliderAutoplay = setInterval(this.nextSlide, 2000);
+      });
+    }
+
+    // // start touch sliding & drag & wheel
+    handleGesture() {
+      if (
+        this.touchendX < this.touchstartX ||
+        this.dragEnd < this.dragStart ||
+        this.wheelStart > 0
+      )
+        this.nextSlide();
+      if (
+        this.touchendX > this.touchstartX ||
+        this.dragEnd > this.dragStart ||
+        this.wheelStart < 0
+      )
+        this.prevSlide();
+    }
+
+    interActions() {
+      //touch start
+      this.container.addEventListener("touchstart", (e) => {
+        clearInterval(this.sliderAutoplay);
+        this.touchstartX = e.changedTouches[0].screenX;
+      }, {passive: true});
+      //drag start
+      this.container.addEventListener("mousedown", (e) => {
+        clearInterval(this.sliderAutoplay);
+        this.dragStart = e.clientX;
+      });
+      //touch end
+      this.container.addEventListener("touchend", (e) => {
+        this.sliderAutoplay = setInterval(this.nextSlide, 2000);
+        this.touchendX = e.changedTouches[0].screenX;
+        this.handleGesture();
+      }, {passive: true});
+      //drag end
+      this.container.addEventListener("mouseup", (e) => {
+        this.dragEnd = e.clientX;
+        this.handleGesture();
+      });
+    }
+
+    handleAll() {
+      this.letSlidesInArr();
+      // this.createDots();
+      // this.triggerMoveDotWhenClickOnDot();
+      this.triggerNextOrPrevFunOnNextOrPrevIsClicked();
+      this.sliderAutoPlay();
+      this.interActions();
+      this.handleMouseWheel();
+    }
+  }
+
+  const slides = document.querySelectorAll(".container-slider");
+
+
+
+  slides.forEach((slide) => {
+    const createdSlideVar = new Slides(slide);
+    createdSlideVar.handleAll();
+    if (slide.classList.contains('sliderWithDots')){
+      createdSlideVar.createDots()
+      createdSlideVar.triggerMoveDotWhenClickOnDot()
+    }
+    if (slide.classList.contains('sliderWithImages')) {
+      createdSlideVar.createImages()
+      createdSlideVar.triggerMoveImgWhenClickOnImg()
+    }
+    
+  });
+
+  //end slider oop//sliderWithImages
+
 
   //1
   //
