@@ -49,6 +49,7 @@ ul {
 select,
 input,
 textarea {
+  background: var(--white-color);
   outline: none;
   &:active {
     outline: none;
@@ -334,6 +335,11 @@ also recommended to do the following:
 
 .sliderImages__img_div{
   cursor: pointer;
+  border-bottom: 4px solid transparent;
+  
+  &[data-active="true"]{
+    border-bottom: 4px solid var(--primary-color);
+  }
 
   &:not([data-active="true"]){
     opacity: .5;
@@ -341,6 +347,7 @@ also recommended to do the following:
 
     &:hover{
       opacity: 1;
+      border-bottom: 4px solid var(--slight-primary-color);
     }
   }
 }
@@ -398,6 +405,8 @@ also recommended to do the following:
   cursor: pointer;
   position: relative;
   top: 0;
+  display: inline-block;
+
 
   &:active {
     top: 1.2px;

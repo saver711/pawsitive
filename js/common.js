@@ -1,6 +1,7 @@
 "use strict";
 
 function commonJs () {
+
   // /////////////////start nav
 
   // nav on scroll
@@ -528,7 +529,6 @@ function commonJs () {
         sliderImages__img_div.appendChild(sliderImages__img);
 
         const sliderImages__img_div_width = `${90 * this.container.offsetWidth / 100 / this.slides__elemntsArr.length}px`
-        console.log(this.container.offsetWidth);
         sliderImages__img_div.style.width = sliderImages__img_div_width
 
         

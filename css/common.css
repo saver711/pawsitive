@@ -51,6 +51,7 @@ ul {
 select,
 input,
 textarea {
+  background: var(--white-color);
   outline: none;
 }
 select:active,
@@ -207,6 +208,10 @@ also recommended to do the following:
 
 .sliderImages__img_div {
   cursor: pointer;
+  border-bottom: 4px solid transparent;
+}
+.sliderImages__img_div[data-active=true] {
+  border-bottom: 4px solid var(--primary-color);
 }
 .sliderImages__img_div:not([data-active=true]) {
   opacity: 0.5;
@@ -214,6 +219,7 @@ also recommended to do the following:
 }
 .sliderImages__img_div:not([data-active=true]):hover {
   opacity: 1;
+  border-bottom: 4px solid var(--slight-primary-color);
 }
 
 /* end slider */
@@ -272,6 +278,7 @@ also recommended to do the following:
   cursor: pointer;
   position: relative;
   top: 0;
+  display: inline-block;
 }
 .mainBtn:active {
   top: 1.2px;

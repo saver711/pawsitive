@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawsitive - Account</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/images/favicon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- start css -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <!-- my css -->
+    <link rel="stylesheet" href="../css/account.css" />
+
+
+    <!-- end css -->
+
+    <!-- start js -->
+
+    <!-- my js -->
+    <script src="../js/account.js" defer></script>
+    <!-- end js -->
+</head>
+
+<body>
+
+    <header class="head">
+        <div class="user">
+            <div class="user__img">
+                <img src="../assets/images/random-person.webp" alt="user's photo">
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="../assets/images/logo-white.webp" alt="logo">
+        </div>
+    </header>
+
+    <form action="" class="userForm">
+        <div class="userForm__img">
+            <img src="../assets/images/random-person.webp" alt="user's photo">
+        </div>
+
+        <h2 class="side__title">setup your profile</h2>
+        <p class="cautialerton"><i class="fa-solid fa-circle-exclamation"></i> Leave the input you don't want to change empty.</p>
+
+        <label for="name" class="userForm__label">full name:</label>
+        <input placeholder="What is your name?"
+            pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$"
+            title="write valid name" type="text" class="userForm__input" id="name">
+
+        <label for="email" class="userForm__label">new e-mail:</label>
+        <input placeholder="Your e-mail goes here.."
+            pattern="^([a-zA-Z])([\w\d\._-]+)?@[a-z\d-]+\.[a-z]{2,}(\.[a-z]{2,})?$" title="write valid email"
+            type="email" class="userForm__input" id="email">
+
+            <label for="phone" class="userForm__label">phone number:</label>
+        <input placeholder="Will be happy to call you.."
+        pattern="^01\d{9}$" title="eg. 01126183678"
+            type="tel" class="userForm__input" id="phone">
+
+            <label for="password" class="userForm__label">new password:</label>
+        <input placeholder="change your secret pattern...." title="eg. 01126183678"
+            type="password" class="userForm__input" id="password">
+
+            <div class="location">
+                <div id="locateMe"><i class="fa-solid fa-map-location-dot"></i> add location info</div>
+
+                <d id="locationInfo">
+                    <p>Latitude: 30.713875°</p>
+                    <p>Longitude: 31.243401°</p>
+                </div>
+
+            </div>
+
+
+
+        <input type="submit" class="mainBtn" value="submit">
+    </form>
+
+
+
+
+
+</body>
+
+</html>

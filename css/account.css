@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;800&family=Sansita+Swashed:wght@300;500&display=swap");
+:root {
+  /*  change here  */
+  --inspiration-color: #008ed4;
+  --slightly-black-color: #575757;
+  --primary-color: #ed6436;
+  --slight-primary-color: rgba(237, 100, 54, 0.5);
+  --white-color: #fff;
+  --very-slight-white-color: #efefef;
+  --black-color: #000;
+  --dark-white-color: #d8d8d8;
+  --danger-color: #ff0b28;
+  --site-padding: 7.8vw;
+}
+
+html {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+.mainBtn {
+  box-shadow: 0 0 0 4em var(--primary-color) inset;
+  color: var(--white-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  transition: all 0.3s ease;
+  padding: 5px 15px;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  display: inline-block;
+}
+.mainBtn:active {
+  top: 1.2px;
+}
+.mainBtn:hover {
+  box-shadow: 0 0 0 0 var(--primary-color) inset;
+  color: var(--primary-color);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.user__img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 950.99px) {
+  /* general */
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 830.99px) {
+  /* general */
+  html {
+    font-size: 6.5px;
+  }
+}/*# sourceMappingURL=account.css.map */
