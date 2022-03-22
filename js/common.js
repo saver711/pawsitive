@@ -739,3 +739,11 @@ function commonJs () {
 };
 
 window.onload = commonJs();
+
+
+// contact page
+const date = new Date(new Date().toString().split('GMT')[0]+' UTC').toISOString().split('.')[0]
+const dateTimeInp = document.getElementById('dateTimeInp');
+
+dateTimeInp.value = date
+// console.log(date.get);

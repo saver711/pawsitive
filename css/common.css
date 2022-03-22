@@ -97,6 +97,32 @@ also recommended to do the following:
 3- set general line-height for p element (1.56 for example)
 4- set *{transition : all .15s ease}
 5- mixins (absolute centering, flex centering, click action>>position, top, cursor combination)
+6- make classes for capitalize and uppercase;
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; //i need to see if this affects p so that i won't set it to p
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
 */
 /* ∞∞ IE ∞∞ */
 /* end general css */

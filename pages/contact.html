@@ -259,7 +259,7 @@
                           <input required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" title="No Numbers Just Letters" name="lastname" type="text" placeholder="Lastname">
                           <input required pattern="^([a-zA-Z])([\w\d\._-]+)?@[a-z\d-]+\.[a-z]{2,}(\.[a-z]{2,})?$" title="eg: ahwork711@gmail.com" name="email" type="email" placeholder="E-mail">
                           <input required pattern="^01\d{9}$" title="eg: 01126183678" name="tel" type="tel" placeholder="Phone number">
-                          <input placeholder="Chose date" required title="we need date to serve you in" name="timedate" type="datetime-local" placeholder="Choose a date">
+                          <input id="dateTimeInp" placeholder="Chose date" required title="we need date to serve you in" name="timedate" type="datetime-local" aria-placeholder="Choose a date">
                           <select name="service">
                               <option value="1">dog boarding</option>
                               <option value="2">cat boarding</option>

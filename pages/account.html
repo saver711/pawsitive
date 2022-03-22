@@ -30,24 +30,24 @@
 <body>
 
     <header class="head">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo-green.webp" alt="logo">
+        </a>
+
         <div class="user">
-            <div class="user__img">
+            <div class="user__img imgContainer">
                 <img src="../assets/images/random-person.webp" alt="user's photo">
             </div>
-        </div>
-
-        <div class="logo">
-            <img src="../assets/images/logo-white.webp" alt="logo">
         </div>
     </header>
 
     <form action="" class="userForm">
-        <div class="userForm__img">
+        <div class="userForm__img imgContainer">
             <img src="../assets/images/random-person.webp" alt="user's photo">
         </div>
 
         <h2 class="side__title">setup your profile</h2>
-        <p class="cautialerton"><i class="fa-solid fa-circle-exclamation"></i> Leave the input you don't want to change empty.</p>
+        <p class="alert"><i class="fa-solid fa-circle-exclamation"></i> Leave the input you don't want to change empty.</p>
 
         <label for="name" class="userForm__label">full name:</label>
         <input placeholder="What is your name?"
@@ -69,11 +69,11 @@
             type="password" class="userForm__input" id="password">
 
             <div class="location">
-                <div id="locateMe"><i class="fa-solid fa-map-location-dot"></i> add location info</div>
+                <div id="locateMe"><i class="fa-solid fa-location-crosshairs"></i> <span>add location info</span></div>
 
                 <d id="locationInfo">
-                    <p>Latitude: 30.713875°</p>
-                    <p>Longitude: 31.243401°</p>
+                    <p>Loading....</p>
+                    <p>Loading....</p>
                 </div>
 
             </div>
