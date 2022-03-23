@@ -248,6 +248,9 @@ body {
 #locationInfo.show {
   max-height: 100px;
 }
+#locationInfo img {
+  width: 4rem;
+}
 
 @media only screen and (max-width: 950.99px) {
   /* general */

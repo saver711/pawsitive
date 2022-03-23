@@ -1088,6 +1088,17 @@ header .headingComponent {
     padding-left: 0 !important;
   }
 
+  .piece1 {
+    text-align: center;
+  }
+
+  .card1 {
+    text-align: center;
+  }
+  .card1 svg {
+    margin-bottom: 1rem;
+  }
+
   /* responsive */
   .responseBox {
     grid-template-columns: 1fr;

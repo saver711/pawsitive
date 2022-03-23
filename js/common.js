@@ -2,6 +2,10 @@
 
 function commonJs () {
 
+  //hide preloader
+  // const preloader = document.getElementById('preloader');
+
+  // preloader.classList.add('hide')
   // /////////////////start nav
 
   // nav on scroll
@@ -730,6 +734,14 @@ function commonJs () {
 
   //end slider oop//sliderWithImages
 
+  // contact page
+const date = new Date(new Date().toString().split('GMT')[0]+' UTC').toISOString().split('.')[0]
+const dateTimeInp = document.getElementById('dateTimeInp');
+
+if(dateTimeInp){
+  dateTimeInp.value = date
+}
+
 
   //1
   //
@@ -741,9 +753,3 @@ function commonJs () {
 window.onload = commonJs();
 
 
-// contact page
-const date = new Date(new Date().toString().split('GMT')[0]+' UTC').toISOString().split('.')[0]
-const dateTimeInp = document.getElementById('dateTimeInp');
-
-dateTimeInp.value = date
-// console.log(date.get);

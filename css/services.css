@@ -144,4 +144,11 @@
 }
 
 /* end more */
-/* end single-service page *//*# sourceMappingURL=services.css.map */
+/* end single-service page */
+@media only screen and (max-width: 720.99px) {
+  .servs__push {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=services.css.map */
