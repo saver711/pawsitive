@@ -511,6 +511,139 @@ height: 100%;
 }
 /* end inspiration svg styling */
 
+/* start popup */
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner{
+    width: 600px;
+    background-color: var(--white-color);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+
+    .fa-xmark{
+      position: absolute;
+      top: .5rem;
+      right: .9rem;
+      font-size: 2.3rem;
+      cursor: pointer;
+      color: crimson;
+    }
+  }
+
+  &__img{
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    span, .popup__over{
+      position: absolute;
+    }
+  }
+
+  &__over{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0,0,0,.9);
+    z-index: 3;
+    flex-direction: column;
+    cursor: pointer;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+
+    &.hide{
+      max-height: 0;
+    }
+
+    p{
+      color: var(--white-color);
+      font-size: 1.4rem;
+    }
+
+    img{
+      width: 7rem;
+      display: inline-block;
+    }
+  }
+
+  span{
+    // background-color: var(--white-color);
+    width: 59%;
+    top: 0;
+    height: 100%;
+    display: block;
+  }
+
+  &__left{
+    left: 0;
+    // border-right: 1px solid var(--dark-white-color);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+    background-color: var(--primary-color);
+    &.animate{
+      animation: forLeft 1s ease-in-out .31s forwards;
+    }
+    
+  }
+  &__right{
+    right: 0;
+    background-color: darkorange;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    
+    &.animate{
+      animation: forRight 1s ease-in-out .31s forwards;
+    }
+
+    // border-left: 1px solid var(--dark-white-color);
+  }
+}
+
+@keyframes forLeft{
+  0%{
+    width: 59%;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  }
+  50%{
+    width: 59%;
+    clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
+  }
+  100%{
+    width: 0;
+    clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
+  }
+}
+
+@keyframes forRight{
+  0%{
+    width: 59%;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  50%{
+    width: 59%;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 30% 100%);
+  }
+  100%{
+    width: 0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 30% 100%);
+  }
+}
+/* end popup */
+
 
 /* start responsive */
 @media only screen and (max-width: 1170.99px) {
@@ -550,7 +683,12 @@ height: 100%;
   }
 }
 
-
+@media only screen and (max-width: 650.99px){
+  .popup__inner{
+    width: 90%;
+    padding: 2rem;
+  }
+}
 // @media only screen and (max-width: 720.99px) {
   
 // }

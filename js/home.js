@@ -94,6 +94,31 @@ window.onload = function () {
 
   // end prices
 
+  /* start popup */
+  const popupOver = document.getElementById('popupOver'),
+        popupLeft = document.getElementById('popupLeft'),
+        popupRight = document.getElementById('popupRight'),
+        popup = document.getElementById('popup'),
+        popupClose = document.getElementById('popupClose')
+
+  popupOver.addEventListener('click', ()=>{
+    popupOver.classList.add('hide')
+    popupLeft.classList.add('animate')
+    popupRight.classList.add('animate')
+  })
+
+  // hide popup
+  popup.addEventListener('click', ({target})=>{
+    if(!target.closest('.popup__inner')){
+      popup.style.display = `none`
+    }
+  })
+
+  popupClose.addEventListener('click', ()=>{
+    popupClose.closest('#popup').style.display = `none`
+  })
+  /* end popup */
+
   //1
   //
   //
