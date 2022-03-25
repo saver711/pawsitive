@@ -117,6 +117,13 @@ window.onload = function () {
   popupClose.addEventListener('click', ()=>{
     popupClose.closest('#popup').style.display = `none`
   })
+  popup.focus()
+
+  popup.addEventListener('keydown', (e)=>{
+    if(e.key == `Escape`){
+      popup.style.display = `none`
+    }
+  })
   /* end popup */
 
   //1
