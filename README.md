@@ -20,7 +20,7 @@ I have been working with javascript for more than 3 years now.
 
 
 # This Project
-Website for food recipes & women related topics
+Pets compassionate and nurturing care website
 
 ## Screenshots
 
